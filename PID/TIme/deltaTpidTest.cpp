@@ -1,0 +1,283 @@
+#include <cstdlib>
+#include <iostream>
+#include <cmath>
+#include <map>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <filesystem>
+#include "reader.h"
+#include "TTree.h"
+#include "TFile.h"
+#include "TH2F.h"
+#include <cstddef>
+
+using namespace std;
+namespace fs = std::filesystem;
+
+// Typedef for the index map
+typedef std::map<int, std::vector<int>> IndexMap;
+
+// Function to create a map from index values
+IndexMap loadMapByIndex(hipo::bank& fromBank, const char* idxVarName) {
+    IndexMap map;
+    if (fromBank.getRows() > 0) {
+        for (int iFrom = 0; iFrom < fromBank.getRows(); ++iFrom) {
+            int iTo = fromBank.getInt(idxVarName, iFrom);
+            if (map.find(iTo) == map.end()) {
+                map[iTo] = vector<int>();
+            }
+            map[iTo].push_back(iFrom);
+        }
+    }
+    return map;
+}
+
+// Function to calculate beta for a given particle
+/* float calculateBeta(float p, float mass) {
+    float E = sqrt(p * p + mass * mass);
+    return p / E;
+} */
+float calculateEnergy(float p, float mass) {
+    return sqrt(p * p + mass * mass);  // Energy: E = sqrt(p^2 + m^2)
+}
+
+float calculateBeta(float p, float mass) {
+    return p / calculateEnergy(p, mass);  // Beta: β = p / E
+}
+
+// Function to calculate delta_t for a given particle
+float calculateDeltaT(float path, float time, float beta, float startTime) {
+    return time - (path / (beta * 29.9792458)) - startTime;
+}
+
+int main() {
+    // Path to the text file containing directory paths
+    string dirListFile = "directories.txt";
+    ifstream inputFile(dirListFile);
+
+    if (!inputFile.is_open()) {
+        cerr << "Error: Could not open " << dirListFile << endl;
+        return 1;
+    }
+
+    // Read directories from the file
+    vector<string> directories;
+    string dir;
+    while (getline(inputFile, dir)) {
+        if (!dir.empty()) {
+            directories.push_back(dir);
+        }
+    }
+    inputFile.close();
+
+    if (directories.empty()) {
+        cerr << "Error: No directories found in " << dirListFile << endl;
+        return 1;
+    }
+
+    // Particle masses in GeV/c^2
+    const float mass_pion = 0.13957;
+    const float mass_kaon = 0.49367;
+    const float mass_proton = 0.93827;
+    const float mass_electron = 0.000511;
+
+    // Create ROOT trees for storing delta t and momentum for different particles
+    TTree* tree_pion = new TTree("pion", "Pion+ Tree");
+    TTree* tree_kaon = new TTree("kaon", "Kaon+ Tree");
+    TTree* tree_proton = new TTree("proton", "Proton Tree");
+
+    // Variables to hold delta t and momentum for each particle type
+    float delta_t_pion, momentum_pion, beta_pion;
+    float delta_t_kaon, momentum_kaon, beta_kaon;
+    float delta_t_proton, momentum_proton, beta_proton;
+
+    // Create branches for the trees
+    tree_pion->Branch("delta_t", &delta_t_pion, "delta_t/F");
+    tree_pion->Branch("momentum", &momentum_pion, "momentum/F");
+    //tree_pion->Branch("beta", &beta_pion, "beta/F");
+
+    tree_kaon->Branch("delta_t", &delta_t_kaon, "delta_t/F");
+    tree_kaon->Branch("momentum", &momentum_kaon, "momentum/F");
+    //tree_kaon->Branch("beta", &beta_kaon, "beta/F");
+
+    tree_proton->Branch("delta_t", &delta_t_proton, "delta_t/F");
+    tree_proton->Branch("momentum", &momentum_proton, "momentum/F");
+    //tree_proton->Branch("beta", &beta_proton, "beta/F");
+
+    TH2F* h2_momentum_deltaT_pion = new TH2F("h2_momentum_deltaT_pion", "Pion Momentum vs DeltaT;Momentum (GeV/c);Delta T (ns)", 100, 0, 10, 100, -10, 10);
+    TH2F* h2_momentum_deltaT_kaon = new TH2F("h2_momentum_deltaT_kaon", "Kaon Momentum vs DeltaT;Momentum (GeV/c);Delta T (ns)", 100, 0, 10, 100, -10, 10);
+    TH2F* h2_momentum_deltaT_proton = new TH2F("h2_momentum_deltaT_proton", "Proton Momentum vs DeltaT;Momentum (GeV/c);Delta T (ns)", 100, 0, 10, 100, -10, 10);
+
+    
+    int highestEnergyElectronCount = 0;
+    int counter = 0;
+    int electron_count = 0; 
+    int totalHighestEnergyElectrons = 0;
+    int eventsWithNoElectrons =0; 
+    // Iterate over directories
+    for (const auto& dir : directories) {
+        cout << "Processing directory: " << dir << endl;
+
+        // Find all .hipo files in the directory
+        vector<string> hipoFiles;
+        for (const auto& entry : fs::directory_iterator(dir)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".hipo") {
+                hipoFiles.push_back(entry.path().string());
+            }
+        }
+
+        if (hipoFiles.empty()) {
+            cout << "  No .hipo files found in directory: " << dir << endl;
+            continue;
+        }
+
+        // Iterate over files in the directory
+        for (const auto& file : hipoFiles) {
+            cout << "  Opening file: " << file << endl;
+
+            // Open HIPO file
+            hipo::reader reader;
+            reader.open(file.c_str());
+
+            hipo::dictionary factory;
+            reader.readDictionary(factory);
+
+            hipo::event event;
+           
+
+            // Load banks
+            hipo::bank PART(factory.getSchema("REC::Particle"));
+            hipo::bank EVENT(factory.getSchema("REC::Event"));
+            hipo::bank SCIN(factory.getSchema("REC::Scintillator"));
+            //const int maxEvents = 10000000; 
+	        const int maxEvents = 10000; 
+            // Process events in the file
+            while (reader.next() && counter < maxEvents) {
+                reader.read(event);
+                event.getStructure(PART);
+                event.getStructure(EVENT);
+                event.getStructure(SCIN);
+
+                // Map SCIN and Particle banks using `pindex`
+                IndexMap scinMap = loadMapByIndex(SCIN, "pindex");
+
+               // int nrows_event = EVENT.getRows();
+                float startTime = EVENT.getFloat("startTime", 0);
+                if (startTime < 0) continue;
+
+                int nrows_part = PART.getRows();
+                float highestElectronEnergy = -1.0;
+                int electronIndex = -1;
+                
+
+                // Step 1: Select the single electron with the highest energy
+                for (int i = 0; i < nrows_part; i++) {
+                    int pid = PART.getInt("pid", i);
+                    if (pid == 11) { // Electron PID
+                        electron_count++; 
+                        float px = PART.getFloat("px", i);
+                        float py = PART.getFloat("py", i);
+                        float pz = PART.getFloat("pz", i);
+                        float p = sqrt(px * px + py * py + pz * pz);
+                        float energy = calculateEnergy(p,mass_electron); // Function to calculate energy
+                        // Update highest energy and its count
+                        if (energy > highestElectronEnergy) {
+                            highestElectronEnergy = energy; // Update highest energy
+                            electronIndex = i;             // Update electron index
+                            highestEnergyElectronCount = 1; // Reset count for highest-energy electrons
+                        } else if (energy == highestElectronEnergy) {
+                            highestEnergyElectronCount++; // Increment count for matching highest energy
+                        }
+                    }
+                }
+                totalHighestEnergyElectrons += highestEnergyElectronCount;
+                if (electron_count == 0) {
+                eventsWithNoElectrons++;  // Count this event
+                std::cout << "Event " << counter << " has no electrons." << std::endl;
+                }
+
+                
+
+                /* // Skip this event if no valid electron is found
+                if (electronIndex == -1) continue;
+
+                // Step 2: Loop over particles for pions, kaons, and protons
+                for (int i = 0; i < nrows_part; i++) {
+                    if (i == electronIndex) continue; // Skip the electron
+
+                    int charge = PART.getInt("charge", i);
+                    if (charge <= 0) continue; // **Charge cut**: Skip neutral or negatively charged particles
+
+                    int pid = PART.getInt("pid", i);
+                    if (pid != 211 && pid != 321 && pid != 2212) continue; // Process only pions, kaons, protons
+
+                    float px = PART.getFloat("px", i);
+                    float py = PART.getFloat("py", i);
+                    float pz = PART.getFloat("pz", i);
+                    float p = sqrt(px * px + py * py + pz * pz);
+
+                    // Assign beta and mass based on particle type
+                    if (pid == 211) { // Pion
+                        beta_pion = calculateBeta(p, mass_pion);
+                    } else if (pid == 321) { // Kaon
+                        beta_kaon = calculateBeta(p, mass_kaon);
+                    } else if (pid == 2212) { // Proton
+                        beta_proton = calculateBeta(p, mass_proton);
+                    }
+
+                    // Process associated SCIN rows for this particle
+                    if (scinMap.find(i) != scinMap.end()) {
+                        for (int iScinRow : scinMap[i]) {
+                            int detector = SCIN.getByte("detector", iScinRow);
+                            if (detector == 12) { // Match to desired detector
+                                float path = SCIN.getFloat("path", iScinRow);
+                                float time = SCIN.getFloat("time", iScinRow);
+
+                                delta_t_pion = calculateDeltaT(path, time, beta_pion, startTime);
+                                delta_t_kaon = calculateDeltaT(path, time, beta_kaon, startTime);
+                                delta_t_proton = calculateDeltaT(path, time, beta_proton, startTime);
+
+                                // Step 3: Fill trees and histograms for respective particles
+                                if (pid == 211) {
+                                    momentum_pion = p;
+                                    tree_pion->Fill();
+                                    h2_momentum_deltaT_pion->Fill(p, delta_t_pion);
+                                } else if (pid == 321) {
+                                    momentum_kaon = p;
+                                    tree_kaon->Fill();
+                                    h2_momentum_deltaT_kaon->Fill(p, delta_t_kaon);
+                                } else if (pid == 2212) {
+                                    momentum_proton = p;
+                                    tree_proton->Fill();
+                                    h2_momentum_deltaT_proton->Fill(p, delta_t_proton);
+                                }
+                            }
+                        }
+                    }
+                } */
+                counter++;
+            }
+
+        }
+    }
+   
+    std::cout << "  Total number of electrons: " << electron_count << std::endl;
+    std::cout << "  Total Number of electrons with highest energy: " << totalHighestEnergyElectrons << std::endl;
+    cout << "  Total number of events: " << counter << endl; 
+                
+
+    // Save the trees to a ROOT file
+    TFile *outputFile = new TFile("particles_data_pid.root", "RECREATE");
+    tree_pion->Write();
+    tree_kaon->Write();
+    tree_proton->Write();
+    h2_momentum_deltaT_pion->Write();  // Write the pion histogram to the file
+    h2_momentum_deltaT_kaon->Write();  // Write the kaon histogram to the file
+    h2_momentum_deltaT_proton->Write(); 
+
+    // Close the ROOT file
+    outputFile->Close();
+
+    return 0;
+}

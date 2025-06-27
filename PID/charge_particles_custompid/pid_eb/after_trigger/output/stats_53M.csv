@@ -1,0 +1,43 @@
+Statistic,Value
+Total events processed,53000000
+Events with trigger electrons,50736695
+Total positive charged particles,99385094
+Total negative charged particles,112992365
+Positive particles with invalid beta (beta <= 0 or beta > 1.2),62507762
+Positive particles with valid beta and p (plotted in beta vs. p),36877332
+Positive particles with 1 <= beta <= 1.2 (excluded from mass histogram),3627066
+Entries in mass histogram (hMassPositiveAll),28577889
+Pion peak mean (with background) (GeV/c^2),18.5773
+Pion peak sigma (with background) (GeV/c^2),1.97311
+Pion mass selection range low (with background, 3 sigma) (GeV/c^2),12.6579
+Pion mass selection range high (with background, 3 sigma) (GeV/c^2),24.4966
+Number of particles in pion mass range (with background),0
+Number of particles with pid == 211 in mass range,0
+Estimated contamination fraction in pion sample (with background) (%),0
+Number of particles with pid == 211 outside the mass range,10317139
+Number of particles in pion mass range (Forward),0
+Number of particles with pid == 211 in mass range (Forward),0
+Estimated contamination fraction in pion sample (Forward) (%),0
+Number of particles in pion mass range (Central),0
+Number of particles with pid == 211 in mass range (Central),0
+Estimated contamination fraction in pion sample (Central) (%),0
+Number of particles with pid == 211 and valid chi2pid,19128048
+Chi2PID mean for positive pions (All Regions),-0.0566045
+Chi2PID sigma for positive pions (All Regions),1.14832
+Chi2PID cut range low (All Regions, 3 sigma),-3.50157
+Chi2PID cut range high (All Regions, 3 sigma),3.38836
+Chi2PID mean for positive pions (Forward),-0.0239089
+Chi2PID sigma for positive pions (Forward),0.999484
+Chi2PID cut range low (Forward, 3 sigma),-3.02236
+Chi2PID cut range high (Forward, 3 sigma),2.97454
+Chi2PID mean for positive pions (Central),-0.14473
+Chi2PID sigma for positive pions (Central),1.49473
+Chi2PID cut range low (Central, 3 sigma),-4.62892
+Chi2PID cut range high (Central, 3 sigma),4.33946
+Number of particles with pid == 211 in mass range after chi2pid cut (overall),0
+Estimated contamination fraction after chi2pid cut (overall) (%),0
+Number of particles with pid == 211 in mass range after chi2pid cut (Forward),0
+Estimated contamination fraction after chi2pid cut (Forward) (%),0
+Number of particles with pid == 211 in mass range after chi2pid cut (Central),0
+Estimated contamination fraction after chi2pid cut (Central) (%),0
+Execution time (seconds),1082.22

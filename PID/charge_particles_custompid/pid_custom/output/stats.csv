@@ -1,0 +1,71 @@
+Statistic,Value
+Total particles before filtering,777960
+Total particles filtered out (status == 0 || charge == 0),381920
+Total particles with assigned PID == 0,153314
+Valid chi2pid_custom,224378
+Invalid chi2pid_custom,156426
+
+Assigned PID Counts (Overall)
+pid,Count
+11,96498
+-11,467
+211,35117
+-211,42094
+321,5323
+-321,3005
+2212,28763
+-2212,8102
+45,8121
+0,153314
+
+Assigned PID Counts (Forward)
+pid,Count
+11,96498
+-11,467
+211,17273
+-211,29401
+321,1485
+-321,1149
+2212,13790
+-2212,3422
+45,2927
+0,36691
+
+Assigned PID Counts (Central)
+pid,Count
+11,0
+-11,0
+211,17844
+-211,12693
+321,3838
+-321,1856
+2212,14973
+-2212,4680
+45,5194
+0,116623
+
+Assigned PID Counts (Band)
+pid,Count
+11,0
+-11,0
+211,0
+-211,0
+321,0
+-321,0
+2212,0
+-2212,0
+45,0
+0,0
+
+Assigned PID Counts (Unknown)
+pid,Count
+11,0
+-11,0
+211,0
+-211,0
+321,0
+-321,0
+2212,0
+-2212,0
+45,0
+0,0

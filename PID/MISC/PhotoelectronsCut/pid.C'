@@ -1,0 +1,88 @@
+#include <cstdlib>
+#include <iostream>
+#include <chrono>
+#include <TFile.h>
+#include <TTree.h>
+#include <TApplication.h>
+#include <TROOT.h>
+#include <TDatabasePDG.h>
+#include <TLorentzVector.h>
+#include <TH1.h>
+#include <TH2.h>
+#include <TChain.h>
+#include <TCanvas.h>
+#include <TBenchmark.h>
+#include <TGraph.h>
+#include "clas12reader.h"
+#include "HipoChain.h"
+
+using namespace clas12;
+using namespace std;
+
+
+void pid() {     
+
+// Process LD Target Files
+    clas12root::HipoChain chainLD;
+    chainLD.Add("/lustre24/expphy/cache/hallb/scratch/rg-d/production/prod/v4ob_aideLD2/dst/recon/018528/rec_clas_018528.evio.00310-00314.hipo");
+    chainLD.db()->turnOffQADB();
+    auto& c12LD = chainLD.C12ref();
+
+    auto negative_particles=0;
+    int status; 
+    int event_count = 0; 
+
+    // Create histogram for number of photoelectrons (nPhe) for negative tracks
+    TH1F* h_nPhe_negative = new TH1F("h_nPhe_negative", "Number of Photoelectrons for Negative Tracks", 100, 0, 50); // Adjust range and bins as needed
+
+    while (chainLD.Next()) {        
+    
+        auto particles = c12LD->getDetParticles();
+        for (auto& p : particles) { 
+            // Check if the particle is negatively charged
+	    auto negatvie_particles = p->par()->getCharge(-1);
+	    // Process each negative particle
+            for (auto& np : negative_particles) {
+                // Get the number of photoelectrons from HTCC
+                int nPhe = np->che(HTCC)->getNphe(); // Use HTCC to get the number of photoelectrons
+
+                // Fill histogram for number of photoelectrons
+                h_nPhe_negative->Fill(nPhe);
+                
+                // Get the status of the particle
+                status = np->par()->getStatus();
+                
+                // Apply forward detector cut
+                if (status > -4000 && status <= 2000) {
+                    // Particle is measured in the forward detector
+                    // Do something with the valid particle, if needed
+                }
+            }
+        }
+
+        // Example of printing the number of negatively charged particles found
+        cout << "Processed an event." << endl;
+    }
+
+    // Create a canvas to display the histogram
+    TCanvas* canvas = new TCanvas("canvas", "Number of Photoelectrons for Negative Tracks", 800, 600);
+    h_nPhe_negative->Draw();
+    
+    // Save the canvas as a PNG file
+    canvas->SaveAs("negative_particle_histogram.png");
+
+    // Clean up
+    delete canvas;
+    delete h_nPhe_negative;
+}
+
+
+
+
+
+
+
+
+
+
+ 

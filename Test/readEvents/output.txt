@@ -1,0 +1,180 @@
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.997503 with row index REC::Particle = 0 time = 123.723 path = 717.21 startTime = 99.7565
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.995373 with row index REC::Particle = 0 time = 123.208 path = 700.278 startTime = 99.7565
+Beta measured from TOF = 1.00657 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 1.00283 with row index REC::Particle = 1 time = 122.999 path = 699.264 startTime = 99.7565
+Beta measured from TOF = 1.00657 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 1.00649 with row index REC::Particle = 1 time = 122.376 path = 683.005 startTime = 99.7565
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.997214 with row index REC::Particle = 0 time = 124.007 path = 732.901 startTime = 99.5084
+Beta measured from TOF = 0.92257 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.926231 with row index REC::Particle = 2 time = 125.444 path = 720.668 startTime = 99.5084
+Beta measured from TOF = 0.92257 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.927631 with row index REC::Particle = 2 time = 124.819 path = 704.382 startTime = 99.5084
+Beta measured from TOF = 0.959818 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.06842 with row index REC::Particle = 5 time = 123.929 path = 782.731 startTime = 99.5084
+Beta measured from TOF = 0.959818 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.11626 with row index REC::Particle = 5 time = 123.391 path = 799.788 startTime = 99.5084
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.01116 with row index REC::Particle = 0 time = 128.064 path = 740.392 startTime = 103.656
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998532 with row index REC::Particle = 0 time = 127.785 path = 722.789 startTime = 103.656
+Beta measured from TOF = 0.767955 with pid value = 2212 for row index REC::Particle 3
+Beta from SCIN = 0.812502 with row index REC::Particle = 3 time = 134.024 path = 740.206 startTime = 103.656
+Beta measured from TOF = 1.02828 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.05364 with row index REC::Particle = 5 time = 128.277 path = 778.256 startTime = 103.656
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998261 with row index REC::Particle = 0 time = 123.354 path = 706.638 startTime = 99.7584
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00358 with row index REC::Particle = 0 time = 122.672 path = 689.87 startTime = 99.7584
+Beta measured from TOF = 1.00088 with pid value = -211 for row index REC::Particle 1
+Beta from SCIN = 0.999994 with row index REC::Particle = 1 time = 123.859 path = 723.027 startTime = 99.7584
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00115 with row index REC::Particle = 0 time = 122.859 path = 706.863 startTime = 99.324
+Beta measured from TOF = 0.979248 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 0.98556 with row index REC::Particle = 1 time = 124.369 path = 740.488 startTime = 99.324
+Beta measured from TOF = 1.02112 with pid value = 22 for row index REC::Particle 3
+Beta from SCIN = 1.06554 with row index REC::Particle = 3 time = 122.648 path = 745.585 startTime = 99.324
+Beta measured from TOF = 1.02112 with pid value = 22 for row index REC::Particle 3
+Beta from SCIN = 1.11715 with row index REC::Particle = 3 time = 122.011 path = 760.342 startTime = 99.324
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00075 with row index REC::Particle = 0 time = 124.913 path = 728.999 startTime = 100.631
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.006 with row index REC::Particle = 0 time = 124.201 path = 711.349 startTime = 100.631
+Beta measured from TOF = 0.645981 with pid value = 2212 for row index REC::Particle 3
+Beta from SCIN = 0.60893 with row index REC::Particle = 3 time = 135.212 path = 631.714 startTime = 100.631
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.995685 with row index REC::Particle = 0 time = 122.957 path = 730.534 startTime = 98.5007
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999141 with row index REC::Particle = 0 time = 122.291 path = 713.094 startTime = 98.5007
+Beta measured from TOF = 0.994053 with pid value = 211 for row index REC::Particle 3
+Beta from SCIN = 0.993753 with row index REC::Particle = 3 time = 122.269 path = 708.595 startTime = 98.5007
+Beta measured from TOF = 0.994053 with pid value = 211 for row index REC::Particle 3
+Beta from SCIN = 0.989497 with row index REC::Particle = 3 time = 121.804 path = 691.743 startTime = 98.5007
+Beta measured from TOF = 0.800467 with pid value = 2212 for row index REC::Particle 4
+Beta from SCIN = 0.784132 with row index REC::Particle = 4 time = 128.603 path = 708.118 startTime = 98.5007
+Beta measured from TOF = 0.800467 with pid value = 2212 for row index REC::Particle 4
+Beta from SCIN = 0.784616 with row index REC::Particle = 4 time = 127.846 path = 690.756 startTime = 98.5007
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999443 with row index REC::Particle = 0 time = 124.028 path = 741.214 startTime = 99.3073
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.995571 with row index REC::Particle = 0 time = 123.502 path = 722.636 startTime = 99.3073
+Beta measured from TOF = 0.986535 with pid value = -211 for row index REC::Particle 1
+Beta from SCIN = 0.976097 with row index REC::Particle = 1 time = 124.142 path = 727.236 startTime = 99.3073
+Beta measured from TOF = 0.986535 with pid value = -211 for row index REC::Particle 1
+Beta from SCIN = 0.986337 with row index REC::Particle = 1 time = 123.276 path = 709.24 startTime = 99.3073
+Beta measured from TOF = 1.00333 with pid value = 211 for row index REC::Particle 2
+Beta from SCIN = 1.00306 with row index REC::Particle = 2 time = 123.164 path = 717.885 startTime = 99.3073
+Beta measured from TOF = 1.00333 with pid value = 211 for row index REC::Particle 2
+Beta from SCIN = 1.0055 with row index REC::Particle = 2 time = 122.559 path = 701.393 startTime = 99.3073
+Beta measured from TOF = 0.774012 with pid value = 2212 for row index REC::Particle 3
+Beta from SCIN = 0.777999 with row index REC::Particle = 3 time = 129.71 path = 709.594 startTime = 99.3073
+Beta measured from TOF = 0.774012 with pid value = 2212 for row index REC::Particle 3
+Beta from SCIN = 0.774817 with row index REC::Particle = 3 time = 129.108 path = 692.694 startTime = 99.3073
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.993973 with row index REC::Particle = 0 time = 123.209 path = 709.317 startTime = 99.4221
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999416 with row index REC::Particle = 0 time = 122.532 path = 692.892 startTime = 99.4221
+Beta measured from TOF = 0.995547 with pid value = 321 for row index REC::Particle 2
+Beta from SCIN = 0.985466 with row index REC::Particle = 2 time = 123.484 path = 711.373 startTime = 99.4221
+Beta measured from TOF = 0.995547 with pid value = 321 for row index REC::Particle 2
+Beta from SCIN = 0.98139 with row index REC::Particle = 2 time = 123.026 path = 694.94 startTime = 99.4221
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999016 with row index REC::Particle = 0 time = 125.948 path = 739.989 startTime = 101.258
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.995778 with row index REC::Particle = 0 time = 125.435 path = 722.25 startTime = 101.258
+Beta measured from TOF = 2.77379 with pid value = -211 for row index REC::Particle 1
+Beta from SCIN = 2.74938 with row index REC::Particle = 1 time = 110.288 path = 744.785 startTime = 101.258
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.997815 with row index REC::Particle = 0 time = 123.811 path = 738.334 startTime = 99.1461
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998303 with row index REC::Particle = 0 time = 123.207 path = 720.615 startTime = 99.1461
+Beta measured from TOF = 0.980999 with pid value = 22 for row index REC::Particle 4
+Beta from SCIN = 1.04803 with row index REC::Particle = 4 time = 123.275 path = 758.644 startTime = 99.1461
+Beta measured from TOF = 1.02099 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.06242 with row index REC::Particle = 5 time = 123.657 path = 781.239 startTime = 99.1461
+Beta measured from TOF = 1.02099 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.11695 with row index REC::Particle = 5 time = 122.993 path = 799.09 startTime = 99.1461
+Beta measured from TOF = 0.953481 with pid value = 22 for row index REC::Particle 7
+Beta from SCIN = 1.06391 with row index REC::Particle = 7 time = 123.582 path = 779.924 startTime = 99.1461
+Beta measured from TOF = 0.953481 with pid value = 22 for row index REC::Particle 7
+Beta from SCIN = 1.11869 with row index REC::Particle = 7 time = 122.723 path = 791.25 startTime = 99.1461
+Beta measured from TOF = 0.908712 with pid value = 22 for row index REC::Particle 8
+Beta from SCIN = 0.978257 with row index REC::Particle = 8 time = 124.792 path = 752.662 startTime = 99.1461
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.997435 with row index REC::Particle = 0 time = 123.411 path = 724.152 startTime = 99.2106
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.996098 with row index REC::Particle = 0 time = 122.865 path = 706.854 startTime = 99.2106
+Beta measured from TOF = 0.994875 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 1.01253 with row index REC::Particle = 1 time = 122.826 path = 717.347 startTime = 99.2106
+Beta measured from TOF = 0.994875 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 1.00602 with row index REC::Particle = 1 time = 122.44 path = 701.078 startTime = 99.2106
+Beta measured from TOF = 0.987117 with pid value = 22 for row index REC::Particle 4
+Beta from SCIN = -2.12437 with row index REC::Particle = 4 time = 87.1089 path = 771.253 startTime = 99.2106
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00354 with row index REC::Particle = 0 time = 122.83 path = 742.008 startTime = 98.1834
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998442 with row index REC::Particle = 0 time = 122.367 path = 724.392 startTime = 98.1834
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00682 with row index REC::Particle = 0 time = 124.173 path = 713.775 startTime = 100.542
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998409 with row index REC::Particle = 0 time = 123.81 path = 696.919 startTime = 100.542
+Beta measured from TOF = 0.912246 with pid value = 22 for row index REC::Particle 2
+Beta from SCIN = 1.08862 with row index REC::Particle = 2 time = 123.904 path = 762.97 startTime = 100.542
+Beta measured from TOF = 0.912246 with pid value = 22 for row index REC::Particle 2
+Beta from SCIN = 1.12295 with row index REC::Particle = 2 time = 123.587 path = 776.359 startTime = 100.542
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00972 with row index REC::Particle = 0 time = 123.145 path = 712.643 startTime = 99.6193
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.998276 with row index REC::Particle = 0 time = 122.848 path = 695.668 startTime = 99.6193
+Beta measured from TOF = 0.733654 with pid value = 2112 for row index REC::Particle 3
+Beta from SCIN = 0.827051 with row index REC::Particle = 3 time = 130.191 path = 758.532 startTime = 99.6193
+Beta measured from TOF = 1.0327 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.05424 with row index REC::Particle = 5 time = 123.201 path = 745.821 startTime = 99.6193
+Beta measured from TOF = 1.0327 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.10733 with row index REC::Particle = 5 time = 122.523 path = 760.86 startTime = 99.6193
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999143 with row index REC::Particle = 0 time = 126.622 path = 729.717 startTime = 102.278
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00155 with row index REC::Particle = 0 time = 125.984 path = 712.297 startTime = 102.278
+Beta measured from TOF = 1.00648 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 1.00719 with row index REC::Particle = 1 time = 124.965 path = 685.515 startTime = 102.278
+Beta measured from TOF = 0.672365 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.672436 with row index REC::Particle = 2 time = 139.812 path = 757.191 startTime = 102.278
+Beta measured from TOF = 0.672365 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.675137 with row index REC::Particle = 2 time = 138.737 path = 738.455 startTime = 102.278
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999941 with row index REC::Particle = 0 time = 128.289 path = 736.206 startTime = 103.747
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.997887 with row index REC::Particle = 0 time = 127.751 path = 718.591 startTime = 103.747
+Beta measured from TOF = 1.0122 with pid value = 22 for row index REC::Particle 4
+Beta from SCIN = 1.06697 with row index REC::Particle = 4 time = 127.705 path = 766.85 startTime = 103.747
+Beta measured from TOF = 1.0122 with pid value = 22 for row index REC::Particle 4
+Beta from SCIN = 1.11825 with row index REC::Particle = 4 time = 127.117 path = 784.011 startTime = 103.747
+Beta measured from TOF = 1.02425 with pid value = 22 for row index REC::Particle 5
+Beta from SCIN = 1.05464 with row index REC::Particle = 5 time = 127.69 path = 757.54 startTime = 103.747
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.0021 with row index REC::Particle = 0 time = 122.573 path = 721.875 startTime = 98.5614
+Beta measured from TOF = 0.998131 with pid value = 211 for row index REC::Particle 1
+Beta from SCIN = 0.999472 with row index REC::Particle = 1 time = 121.571 path = 689.92 startTime = 98.5614
+Beta measured from TOF = 0.624369 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.631913 with row index REC::Particle = 2 time = 137.977 path = 747.221 startTime = 98.5614
+Beta measured from TOF = 0.624369 with pid value = 2212 for row index REC::Particle 2
+Beta from SCIN = 0.626673 with row index REC::Particle = 2 time = 137.326 path = 728.779 startTime = 98.5614
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00016 with row index REC::Particle = 0 time = 126.744 path = 723.443 startTime = 102.634
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.999275 with row index REC::Particle = 0 time = 126.184 path = 705.992 startTime = 102.634
+Beta measured from TOF = 0.973018 with pid value = -211 for row index REC::Particle 2
+Beta from SCIN = 0.973143 with row index REC::Particle = 2 time = 127.433 path = 724.01 startTime = 102.634
+Beta measured from TOF = 0.973018 with pid value = -211 for row index REC::Particle 2
+Beta from SCIN = 0.973406 with row index REC::Particle = 2 time = 126.827 path = 706.489 startTime = 102.634
+Beta measured from TOF = 1.00287 with pid value = 22 for row index REC::Particle 8
+Beta from SCIN = 1.07004 with row index REC::Particle = 8 time = 126.226 path = 757.334 startTime = 102.634
+Beta measured from TOF = 1.00287 with pid value = 22 for row index REC::Particle 8
+Beta from SCIN = 1.1029 with row index REC::Particle = 8 time = 125.975 path = 772.311 startTime = 102.634
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 1.00935 with row index REC::Particle = 0 time = 126.541 path = 743.306 startTime = 101.994
+Beta measured from TOF = 1 with pid value = 11 for row index REC::Particle 0
+Beta from SCIN = 0.994338 with row index REC::Particle = 0 time = 126.321 path = 725.686 startTime = 101.994

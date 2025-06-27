@@ -1,0 +1,70 @@
+Statistic,Value
+Total events processed,100000
+Pre-trigger total particles,794854
+Pre-trigger total neutral particles (charge == 0),398814
+Pre-trigger total positive charged particles (charge > 0),182742
+Pre-trigger total negative charged particles (charge < 0),213298
+Pre-trigger total electrons (pid == 11),100579
+Trigger electron events,95944
+
+Pre-Trigger PID Counts (REC::Particle),
+PID,Count
+-2212,8472
+-321,3113
+-211,43648
+-11,483
+0,160123
+11,100579
+22,149679
+45,8478
+211,36312
+321,5520
+2112,248649
+2212,29798
+
+Pre-Trigger PID Count Validation,
+Sum of PID counts,794854
+Matches pre-trigger total particles?,Yes
+
+Trigger Electron Cut Statistics,
+Cut,Count
+Electrons with pid == 11,100579
+Electrons with pid == 11 and status < 0,100000
+Electrons with pid == 11, status < 0, and vz_tele in [-20, 5],95944
+Electrons with pid == 11, status < 0, vz_tele in [-20, 5], and abs(status) / 1000 == 2,95944
+
+Pre-Trigger PID Counts with Valid Chi2PID (REC::Particle),
+PID,Count
+-2212,7276
+-321,3087
+-211,43417
+-11,483
+0,0
+11,100579
+22,0
+45,7250
+211,35929
+321,5462
+2112,0
+2212,29688
+
+Pre-Trigger PID Counts with Invalid Chi2PID (REC::Particle),
+PID,Count
+-2212,1196
+-321,26
+-211,231
+-11,0
+0,160123
+11,0
+22,149679
+45,1228
+211,383
+321,58
+2112,248649
+2212,110
+
+Pre-Trigger Chi2PID Count Validation,
+Sum of particles with valid Chi2PID,233171
+Sum of particles with invalid Chi2PID,561683
+Total (valid + invalid),794854
+Matches sum of pre-trigger PID counts?,Yes

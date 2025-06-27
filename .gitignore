@@ -1,0 +1,10 @@
+# Ignore folders
+4.2.0/
+.vscode/
+Softwares
+# Ignore large files
+*.root
+*.hipo
+*.o
+*.log
+temp/

@@ -1,0 +1,2 @@
+pLow	pHigh	Pion_Mean	Pion_Sigma	Pion_Amplitude	Pion_Chi2NDF	Kaon_Mean	Kaon_Sigma	Kaon_Amplitude	Kaon_Chi2NDF
+4	4.3	0.99979	0.00243192	20028.1	167.851	0.991646	0.00160565	4090.76	184.942

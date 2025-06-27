@@ -1,0 +1,79 @@
+Statistic,Value
+Before Trigger: Total particles before filtering,781615
+Before Trigger: Total unidentified before filtering (pid == 0),160012
+Before Trigger: Total particles filtered out (status == 0 || charge == 0),385575
+Before Trigger: Total particles filtered out with pid == 0,375
+Before Trigger: Total invalid chi2pid,162869
+Before Trigger: Total invalid chi2pid nonzero pid,3232
+Before Trigger: Total invalid chi2pid custom,162869
+Before Trigger: Total invalid chi2pid custom nonzero pid,3232
+Before Trigger: Valid chi2pid custom,233171
+Before Trigger: Valid chi2pid custom pid zero,0
+Before Trigger: Invalid chi2pid custom pid zero,159637
+Before Trigger: Valid chi2pid custom nonzero pid,233171
+Before Trigger: Valid chi2pid,233171
+
+PID Counts (Overall)
+pid,Pid from REC,Custom Pid
+11,100579,100579
+-11,483,483
+211,36312,36343
+-211,43648,43645
+321,5520,5507
+-321,3113,3114
+2212,29798,29780
+-2212,8472,8474
+45,8478,8478
+0,159637,159637
+
+PID Counts (Forward)
+pid,Pid from REC,Custom Pid
+11,100579,100579
+-11,483,483
+211,17851,17882
+-211,30500,30500
+321,1559,1546
+-321,1199,1199
+2212,14289,14271
+-2212,3580,3580
+45,3056,3056
+0,38255,38255
+
+PID Counts (Central)
+pid,Pid from REC,Custom Pid
+11,0,0
+-11,0,0
+211,18461,18461
+-211,13148,13145
+321,3961,3961
+-321,1914,1915
+2212,15509,15509
+-2212,4892,4894
+45,5422,5422
+0,121382,121382
+
+PID Counts (Band)
+pid,Pid from REC,Custom Pid
+11,0,0
+-11,0,0
+211,0,0
+-211,0,0
+321,0,0
+-321,0,0
+2212,0,0
+-2212,0,0
+45,0,0
+0,0,0
+
+PID Counts (Unknown)
+pid,Pid from REC,Custom Pid
+11,0,0
+-11,0,0
+211,0,0
+-211,0,0
+321,0,0
+-321,0,0
+2212,0,0
+-2212,0,0
+45,0,0
+0,0,0

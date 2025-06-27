@@ -1,0 +1,980 @@
+#include <cstdlib>
+#include <iostream>
+#include <cmath>
+#include <map>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <filesystem>
+#include "reader.h"
+#include "TTree.h"
+#include "TFile.h"
+#include "TH2F.h"
+#include <cstddef>
+#include <TStopwatch.h>
+#include <TCanvas.h>
+#include <TLegend.h>
+#include <limits>
+#include "TStyle.h"
+#include <set>
+
+using namespace std;
+namespace fs = std::filesystem;
+
+
+std::set<int> unique_pids;
+
+// Constants for HTCC&LTCC
+const float HTCC_PION_THRESHOLD = 4.9f;
+const float LTCC_PION_THRESHOLD = 3.0f;
+const int HTCC_DETECTOR = 15;
+const int LTCC_DETECTOR = 16;
+
+// Map type to hold indices from detector banks keyed by particle index.
+typedef std::map<int, std::vector<int>> IndexMap;
+
+// Function to build a map from a bank based on a given index variable (e.g., "pindex")
+IndexMap loadMapByIndex(hipo::bank& fromBank, const char* idxVarName) {
+    IndexMap map;
+    if (fromBank.getRows() > 0) {
+        for (int iFrom = 0; iFrom < fromBank.getRows(); ++iFrom) {
+            int iTo = fromBank.getInt(idxVarName, iFrom);
+            map[iTo].push_back(iFrom);
+        }
+    }
+    return map;
+}
+
+// Utility functions for energy, beta, and deltaT
+float calculateEnergy(float p, float mass) { 
+    return sqrt(p * p + mass * mass); 
+}
+
+float calculateBeta(float p, float mass) { 
+    return p / calculateEnergy(p, mass); 
+}
+
+// Note: 29.9792458 cm/ns is the speed of light in these units.
+/* float calculateDeltaT(float path, float time, float beta, float vt) {
+    return time - (path / (beta * 29.9792458f)) - vt;
+} */
+float calculateDeltaT(float path, float time, float beta, float vt) {
+    return time - (path / (beta * 29.9792458f)) - vt;
+}
+int main() {
+    TStopwatch timer;
+    timer.Start();
+
+    // Read directories from a file (one per line)
+    ifstream inputFile("directories.txt");
+    if (!inputFile.is_open()) {
+        cerr << "Error: Could not open directories.txt" << endl;
+        return 1;
+    }
+    vector<string> directories;
+    string dir;
+    while (getline(inputFile, dir)) {
+        if (!dir.empty()) {
+            directories.push_back(dir);
+        }
+    }
+    inputFile.close();
+    if (directories.empty()) {
+        cerr << "Error: No directories found" << endl;
+        return 1;
+    }
+
+    // Create an output ROOT file and two histograms for ΔT
+    TFile *outputFile = new TFile("particles_data_analysis.root", "RECREATE");
+    TH1F* h1_deltaT_pion_positive_wpid = new TH1F("h1_deltaT_pion_positive_wpid", "+ve pion; #DeltaT (ns); Counts", 100, -5, 5);
+    TH1F* h1_deltaT_pion_positive_wopid = new TH1F("h1_deltaT_pion_positive_wopid", "+ve pion; #DeltaT (ns); Counts", 100, -5, 5);
+    TH1F* h1_deltaT_kaon_positive_wpid = new TH1F("h1_deltaT_kaon_positive_wpid", "+ve kaon; #DeltaT (ns); Counts", 100, -5, 5);
+    TH1F* h1_deltaT_kaon_positive_wopid = new TH1F("h1_deltaT_kaon_positive_wopid", "+ve kaon; #DeltaT (ns); Counts", 100, -5, 5);
+
+    TH1F* h1_deltaT_deuteron_wpid = new TH1F("h1_deltaT_deuteron_wpid", "Deuteron; #DeltaT (ns); Counts", 100, -40, 100);
+    TH1F* h1_deltaT_deuteron_wopid = new TH1F("h1_deltaT_deuteron_wopid", "Deuteron; #DeltaT (ns); Counts", 100, -40, 100);
+
+    TH1F* h1_deltaT_proton_wpid = new TH1F("h1_deltaT_proton_wpid", "Proton; #DeltaT (ns); Counts", 100, -5, 5);
+    TH1F* h1_deltaT_proton_wopid = new TH1F("h1_deltaT_proton_wopid", "Proton; #DeltaT (ns); Counts", 100, -5, 5);
+
+    // Initial histogram for all positive particles (before PID)
+    TH2F* h_dt_vs_p_all_pos = new TH2F("h_dt_vs_p_all_pos", "All +ve #DeltaT vs. p (Before PID); p (GeV/c); #DeltaT (ns)", 50, 0, 10, 100, -5, 5);
+
+    //  ΔT vs. p
+    TH2F* h_dt_vs_p_pion_pos = new TH2F("h_dt_vs_p_pion_pos", "#pi^{+} #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_kaon_pos = new TH2F("h_dt_vs_p_kaon_pos", "K^{+} #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_proton = new TH2F("h_dt_vs_p_proton", "Proton #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_deuteron = new TH2F("h_dt_vs_p_deuteron", "Deuteron #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_unidentified = new TH2F("h_dt_vs_p_unidentified", "Unidentified #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+
+    TH2F* h_dt_vs_p_pion_pos_c = new TH2F("h_dt_vs_p_pion_pos_c", "#pi^{+} #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_kaon_pos_c = new TH2F("h_dt_vs_p_kaon_pos_c", "K^{+} #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_proton_c = new TH2F("h_dt_vs_p_proton_c", "Proton #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_deuteron_c = new TH2F("h_dt_vs_p_deuteron_c", "Deuteron #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+    TH2F* h_dt_vs_p_unidentified_c = new TH2F("h_dt_vs_p_unidentified_c", "Unidentified #DeltaT vs. p; p (GeV/c); #DeltaT (ns)", 200, 0, 10, 200, -5, 5);
+
+
+    
+
+
+
+    //
+
+
+    // required plots for trigger electrons
+    TH1F* h1_nphe_tele = new TH1F ("h1_nphe_tele", "nphe_trigger_electron; nphe; counts", 200, 0, 60);
+    TH1F* h1_nphe_tele_1 = new TH1F ("h1_nphe_tele", "nphe_trigger_electron 0-10; nphe; counts", 200, 0, 10); 
+    TH1F* h1_charge_tele = new TH1F ("h1_charge_tele", "charge_trigger_electron; charge; counts", 200, -2, 0); 
+    TH1F* h1_status_tele = new TH1F("h1_status_tele", "status_trigger_electron; status; counts", 200, -4000, -2000 );
+    TH1F* h1_vz_tele = new TH1F ("h1_vz_tele", "vz_trigger_electron; vz (cm); counts", 200, - 25, 10); 
+    TH1F* h1_chi2pid_tele = new TH1F ("h1_chi2pid_tele", "chi2pid_trigger_electron; chi2pid; counts", 200, -10, 10);
+    TH1F* h1_energy_pcal_tele = new TH1F ("h1_energy_pcal_tele", "energy_pcal_trigger_electron; enrgy_pcal; counts", 200, 0, 2);
+    TH1F* h1_energy_pcal_tel_1 = new TH1F ("h1_energy_pcal_tele_1", "energy_pcal_trigger_electron 0-0.3 GeV; enrgy_pcal; counts", 200, 0, 0.3);
+    TH1F* h1_sampling_fraction_tele = new TH1F ("h1_sampling_fraction_tele", "sampling_fraction_trigger_electron; sampling_fraction; counts", 200, 0, 0.6);
+
+
+    // Define particle masses (in GeV)
+    const float mass_pion = 0.13957f;
+    const float mass_kaon = 0.49367f;
+    const float mass_proton = 0.93827f;
+    const float mass_electron = 0.000511f;
+    const float mass_positron = 0.000511f;
+    const float mass_deuteron = 1.87705f; 
+
+
+    
+    int total_events_processed = 0;
+    int total_electron_number = 0; 
+    int pid, charge; 
+    float chi2pid; 
+    const int maxEvents = 100000;
+    int event_count = 0;
+    static int count_pid = 0, count_manual = 0;
+    int count_all_positve = 0; 
+    int count_positive_pion = 0; 
+    int count_positive_kaon = 0; 
+    int count_proton = 0 ; 
+    int count_deuteron = 0; 
+    int count_positron = 0 ; 
+    int count_pidzero = 0; 
+    int all_sum = 0; 
+    int count_chi2pid = 0;
+
+
+    int total_electrons = 0; 
+    int total_positrons = 0; 
+    int total_positive_pions = 0;
+    int total_negative_pions = 0;
+    int total_positive_kaons = 0;
+    int total_negative_kaons = 0;
+    int total_protons = 0; 
+    int total_antiprotons = 0; 
+    int total_deuterons = 0; 
+    int total_unidentified = 0; 
+    int total_photons = 0; 
+    int total_neutrons = 0; 
+
+    int total_electrons_trigger = 0, total_positrons_trigger = 0;
+    int total_positive_pions_trigger = 0, total_negative_pions_trigger = 0;
+    int total_positive_kaons_trigger = 0, total_negative_kaons_trigger = 0;
+    int total_protons_trigger = 0, total_antiprotons_trigger = 0;
+    int total_deuterons_trigger = 0, total_neutrons_trigger = 0;
+    int total_photons_trigger = 0, total_unidentified_trigger = 0;
+    int count_chi2pid_trigger = 0;
+
+    
+    int charge_number = 0; 
+
+    int bank_pid_count = 0;
+    int manual_pid_count = 0;
+
+   
+
+    //*********For first row of REC::Particle Bank
+    int trigger_electron_count_before = 0;
+    int trigger_electron_count_after = 0;
+
+    
+    int trigger_electron_index = -1;
+    int trigger_positron_index = -1; 
+    float max_energy = -1.0;
+    int directory_count = 0; 
+    int hipo_file_count = 0; 
+    
+
+    for (const auto& dir : directories) {
+        directory_count++; 
+        vector<string> hipoFiles;
+        for (const auto& entry : fs::directory_iterator(dir)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".hipo") {
+                hipoFiles.push_back(entry.path().string());
+            }
+        }
+        /*  for (const auto& entry : fs::directory_iterator(dir)) {
+        if (entry.is_regular_file() && entry.path().filename() == "skim_run_018537.hipo") {
+            hipoFiles.push_back(entry.path().string());
+        } 
+        }*/
+        
+        if (hipoFiles.empty()) {
+            cout << "  No .hipo files found in directory: " << dir << endl;
+            continue;
+        }
+
+        for (const auto& file : hipoFiles) {
+            hipo_file_count++;
+            cout << "  Opening file: " << file << endl;
+            hipo::reader reader;
+            reader.open(file.c_str());
+            hipo::dictionary factory;
+            reader.readDictionary(factory);
+           
+            while (reader.next() == true ) {
+                 
+                if (event_count >= maxEvents) break;
+                event_count++;
+               
+             // / //////////////////////////////////////////
+
+                hipo::event event;
+                reader.read(event);
+                
+                // Load banks for this event
+                hipo::bank PART(factory.getSchema("REC::Particle"));
+                hipo::bank EVENT(factory.getSchema("REC::Event"));
+                hipo::bank SCIN(factory.getSchema("REC::Scintillator")); 
+                hipo::bank CHER(factory.getSchema("REC::Cherenkov"));
+                hipo::bank CALO(factory.getSchema("REC::Calorimeter"));
+
+                event.getStructure(PART);
+                event.getStructure(EVENT);
+                event.getStructure(SCIN);
+                event.getStructure(CHER);
+                event.getStructure(CALO);
+                 
+                // Build maps for scintillator and cherenkov hits keyed by particle index.
+                IndexMap scinMap = loadMapByIndex(SCIN, "pindex");
+                IndexMap cherMap = loadMapByIndex(CHER, "pindex");
+                IndexMap caloMap = loadMapByIndex(CALO, "pindex");
+
+                float startTime = EVENT.getFloat("startTime", 0);
+                //if (vt < 0) continue;
+
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                // Identify trigger electron (to be skipped in PID processing)
+                bool has_trigger_electron = false;
+                      
+                //cout << "Number of particles in this event: " << PART.getRows() << endl;
+                for (int i = 0; i < PART.getRows(); i++) {
+                    // Get particle information
+                    pid = PART.getInt("pid", i);
+                    chi2pid = PART.getFloat("chi2pid", i);
+                    charge = PART.getByte("charge",i);
+                    if (pid ==11){total_electrons++; }
+                    if (pid == 211){total_positive_pions++;}
+                    if (pid == -211){total_negative_pions++;}
+                    if (pid == -11){total_positrons++;}
+                    if (pid == 321){total_positive_kaons++;}
+                    if (pid == -321){total_negative_kaons++;}
+                    if (pid == 45){total_deuterons++;}
+                    if (pid == 2212){total_protons++;}
+                    if (pid == -2212){total_antiprotons++;}
+                    if (pid == 22){total_photons++;}
+                    if (pid == 2112){total_neutrons++;}
+                    if (pid == 0 && charge!=0){total_unidentified++;}
+                    if (chi2pid != 9999.0  && charge!=0 && pid!=0 ){count_chi2pid++;}
+                    
+                    if (pid == 11 && i == 0) {                       
+                        trigger_electron_count_before++;
+
+                        short status = PART.getShort("status", i);
+                         
+                        float vz_tele = PART.getFloat("vz", i);
+                        charge = PART.getByte("charge",i);
+                        float px = PART.getFloat("px", i);
+                        float py = PART.getFloat("py", i);
+                        float pz = PART.getFloat("pz", i);
+                        float p = sqrt(px*px + py*py + pz*pz);
+
+                        int det_cher,nphe_cher, det_cal, layer_cal;
+                        float energy_pcal, energy_ecin, energy_ecout, energy_total, sampling_fraction ; 
+                        if (cherMap.find(i) != cherMap.end()){
+                            // Process associated CHER rows for this particle
+                            for (int iCherRow : cherMap[i]){
+                                det_cher = CHER.getByte("detector", iCherRow);
+                                nphe_cher = CHER.getFloat("nphe", iCherRow); 
+                            }
+                        }
+                        if (caloMap.find(i) != caloMap.end()){
+                            // Process associated CALOW rows for this particle
+                            for (int iCalRow : caloMap[i]){
+                                det_cal = CALO.getByte("detector", iCalRow);
+                                layer_cal = CALO.getByte("layer", iCalRow);
+                                if ( layer_cal == 1)
+                                    energy_pcal = CALO.getFloat("energy", iCalRow); 
+                                else if ( layer_cal == 4) 
+                                    energy_ecin = CALO.getFloat("energy", iCalRow); 
+                                else if (layer_cal == 7)
+                                    energy_ecout = CALO.getFloat("energy", iCalRow); 
+                            }
+                        }
+                        energy_total = energy_pcal + energy_ecin + energy_ecout; 
+                        sampling_fraction = energy_total / p ; 
+                        
+                        // Apply trigger electron cuts
+                        if (  status < 0 &&   chi2pid > -5 && chi2pid < 5 && vz_tele >= -20 && vz_tele<=5 && abs(status)/1000 ==  2   ) {
+
+                            
+
+                            trigger_electron_count_after++; 
+                            has_trigger_electron = true;
+                            trigger_electron_index = i ; 
+                            // Count it if all cuts pass           
+                            h1_status_tele->Fill(status);
+                            h1_vz_tele->Fill(vz_tele); 
+                            h1_chi2pid_tele->Fill(chi2pid); 
+                            h1_nphe_tele->Fill(nphe_cher);
+                            h1_nphe_tele_1->Fill(nphe_cher); 
+                            h1_energy_pcal_tele->Fill(energy_pcal);
+                            h1_energy_pcal_tel_1->Fill(energy_pcal);
+                            h1_sampling_fraction_tele->Fill(sampling_fraction);  
+                            h1_charge_tele->Fill(charge);                           
+                        }
+                       
+                    }
+
+                    
+                    
+                }
+
+                
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                // Skip this event if no trigger electron found
+                
+                if (!has_trigger_electron) continue; // Skip event if no trigger electrons       
+                total_events_processed++;
+
+                
+                
+               for (int i = 0; i < PART.getRows(); i++) {
+                    // if (i == trigger_electron_index) continue;
+                    //if (i ==  trigger_positron_index) continue; 
+                    const int charge = PART.getByte("charge", i);
+                    const int status = PART.getInt("status", i); 
+                    //if (abs(status)/1000 != 2) continue;
+                    //if (abs(status) < 2000 && abs(status)>= 4000) continue;
+                    //if (charge <= 0) continue;
+                    
+                    count_all_positve++; 
+                    // Get momentum components and compute magnitude
+                    const float px = PART.getFloat("px", i);
+                    const float py = PART.getFloat("py", i);
+                    const float pz = PART.getFloat("pz", i);
+                    const float p = sqrt(px*px + py*py + pz*pz);
+                    float vt = PART.getFloat("vt",i);
+                    // --- Bank PID filling (independent of ΔT) ---
+                    int bank_pid = PART.getInt("pid", i);
+                    unique_pids.insert(bank_pid);
+                    
+                   // Count particles based on PID
+                            if (bank_pid == 11) { total_electrons_trigger++; }
+                            if (bank_pid == 211) { total_positive_pions_trigger++; }
+                            if (bank_pid == -211) { total_negative_pions_trigger++; }
+                            if (bank_pid == -11) { total_positrons_trigger++; }
+                            if (bank_pid == 321) { total_positive_kaons_trigger++; }
+                            if (bank_pid == -321) { total_negative_kaons_trigger++; }
+                            if (bank_pid == 45) { total_deuterons_trigger++; }
+                            if (bank_pid == 2212) { total_protons_trigger++; }
+                            if (bank_pid == -2212) { total_antiprotons_trigger++; }
+                            if (bank_pid == 22) { total_photons_trigger++; }
+                            if (bank_pid == 2112) { total_neutrons_trigger++; }
+                            if (bank_pid == 0 && charge != 0) { total_unidentified_trigger++; }
+
+                    
+                    
+                    if (scinMap.find(i) != scinMap.end()) {
+                        // Variables to store the best FTOF hit (prioritized by layer)
+                        int best_layer = -1;
+                        float best_path = 0.0;
+                        float best_time = 0.0;
+
+                        // First pass: Find the highest priority FTOF hit (1B > 1A > 2)
+                        for (int iScinRow : scinMap[i]) {
+                            if (SCIN.getByte("detector", iScinRow) == 12) { // FTOF
+                                int layer = SCIN.getByte("layer", iScinRow);
+
+                                // Priority check (1B > 1A > 2)
+                                if (layer == 2) { // 1B (highest priority)
+                                    best_layer = 2;
+                                    best_path = SCIN.getFloat("path", iScinRow);
+                                    best_time = SCIN.getFloat("time", iScinRow);
+                                    break; // Stop after finding 1B
+                                } 
+                                else if (layer == 1 && best_layer < 2) { // 1A
+                                    best_layer = 1;
+                                    best_path = SCIN.getFloat("path", iScinRow);
+                                    best_time = SCIN.getFloat("time", iScinRow);
+                                } 
+                                else if (layer == 3 && best_layer < 1) { // 2 (lowest)
+                                    best_layer = 3;
+                                    best_path = SCIN.getFloat("path", iScinRow);
+                                    best_time = SCIN.getFloat("time", iScinRow);
+                                }
+                            }
+                        }
+
+                        //  Use the best FTOF hit for ΔT calculation
+                        if (best_layer != -1) {
+
+                            // Before PID: Calculate ΔT with default mass (e.g., pion) for all positive particles
+                            float mass_default = mass_pion; // Default to pion mass
+                            float dt_all = calculateDeltaT(best_path, best_time, calculateBeta(p, mass_default), vt);
+                            h_dt_vs_p_all_pos->Fill(p, dt_all);
+
+                            float mass = mass_pion; // Default to pion
+                            if (bank_pid == 321) mass = mass_kaon;
+                            else if (bank_pid == 2212) mass = mass_proton;
+                            else if (bank_pid == 45) mass = mass_deuteron;
+                            float dt= calculateDeltaT(best_path, best_time, calculateBeta(p, mass), vt); 
+            
+                            
+                            if (bank_pid == 211) {
+                                h1_deltaT_pion_positive_wpid->Fill(dt);
+                                h_dt_vs_p_pion_pos->Fill(p,dt);
+                                
+                            }
+                            else if (bank_pid == 321) {
+                                
+                                h1_deltaT_kaon_positive_wpid->Fill(dt);
+                                h_dt_vs_p_kaon_pos->Fill(p,dt);
+                            }
+                            else if (bank_pid == 2212) {
+                                
+                                h1_deltaT_proton_wpid->Fill(dt);
+                                h_dt_vs_p_proton->Fill(p,dt);
+                            }
+                            else if (bank_pid == 45) {
+                                 
+                                h1_deltaT_deuteron_wpid->Fill(dt);
+                                h_dt_vs_p_deuteron->Fill(p,dt);
+                            }
+                            else if (bank_pid == -11){
+                                
+
+                            }
+                            
+
+                            
+                        }
+                    }
+                     /* if (bank_pid == 0){
+                            //std::cout << "PID 0 found: Charge = " << charge << " PID = " << bank_pid << std::endl;
+                            h_dt_vs_p_unidentified->Fill(p,dt);
+                            count_pidzero++;
+                        } */
+                    if (bank_pid == -11) continue; 
+                  
+                   // --- Manual PID ΔT calculation with FTOF panel prioritization (by LAYER) ---
+                    float best_dt_pion = numeric_limits<float>::max();
+                    float best_dt_kaon = numeric_limits<float>::max();
+                    float best_dt_proton = numeric_limits<float>::max();
+                    float best_dt_deuteron = numeric_limits<float>::max();
+                    bool valid_dt_found = false;
+                    float dt_pion = 0 ; 
+                    float dt_kaon = 0 ; 
+                    float dt_proton = 0 ; 
+                    float dt_deuteron = 0 ; 
+
+                    // FTOF panel prioritization: 1B (layer=2) > 1A (layer=1) > 2 (layer=3)
+                    
+
+                    // Debugging: Print the particle ID to track which particle we are processing
+                    cout << "Processing particle ID: " << i << endl;
+
+                    int highestPriorityLayer = -1;
+                    float selectedPath = 0.0, selectedTime = 0.0;
+                    std::string selectedDetector = "";  // To store the selected detector type
+                   
+
+                    // First pass: Look for FTOF hits
+                    if (scinMap.find(i) != scinMap.end()) {
+                        for (int iScinRow : scinMap[i]) {
+                            if (SCIN.getByte("detector", iScinRow) == 12) { // FTOF hits
+                                int layer = SCIN.getByte("layer", iScinRow);
+                                float path = SCIN.getFloat("path", iScinRow);
+                                float time = SCIN.getFloat("time", iScinRow);
+
+                                // Priority check (1B > 1A > 2)
+                                if (layer == 2) { // 1B (highest priority)
+                                    highestPriorityLayer = 2;
+                                    selectedPath = path;
+                                    selectedTime = time;
+                                    valid_dt_found = true;
+                                    selectedDetector = "FTOF";
+                                    break; // Stop after finding 1B
+                                } else if (layer == 1 && highestPriorityLayer < 2) { // 1A
+                                    highestPriorityLayer = 1;
+                                    selectedPath = path;
+                                    selectedTime = time;
+                                    selectedDetector = "FTOF";
+                                    valid_dt_found = true;
+                                } else if (layer == 3 && highestPriorityLayer < 2) { // 2 (lowest priority)
+                                    highestPriorityLayer = 3;
+                                    selectedPath = path;
+                                    selectedTime = time;
+                                    selectedDetector = "FTOF";
+                                    valid_dt_found = true;
+                                }
+                            }
+                        }
+                    }
+
+                    // If no valid FTOF hit found, use ECAL hits
+                   /*  if (!valid_dt_found && caloMap.find(i) != caloMap.end()) {
+                        int bestEcalLayer = -1;
+                        float bestPath = 0.0, bestTime = 0.0;
+
+                        for (int iCaloRow : caloMap[i]) {
+                            if (CALO.getByte("detector", iCaloRow) == 7) { // ECAL hits
+                                int layer = CALO.getByte("layer", iCaloRow);
+
+                                // Priority order: PCAL (1) > ECIN (4) > ECOUT (7)
+                                if ((layer == 1 && bestEcalLayer < 1) ||  // PCAL (highest priority)
+                                    (layer == 4 && bestEcalLayer < 4) ||  // ECIN (middle priority)
+                                    (layer == 7 && bestEcalLayer < 7)) {  // ECOUT (lowest priority)
+
+                                    bestEcalLayer = layer;
+                                    bestPath = CALO.getFloat("path", iCaloRow);
+                                    bestTime = CALO.getFloat("time", iCaloRow);
+                                }
+                            }
+                        }
+
+                        // If a valid ECAL hit is found, use this data for ΔT calculation
+                        if (bestEcalLayer != -1) {
+                
+                            selectedPath = bestPath;
+                            selectedTime = bestTime;
+                            highestPriorityLayer = bestEcalLayer;
+                            selectedDetector = "ECAL";
+                            valid_dt_found = true;
+
+                        
+                        }
+                    } */
+
+                    // Print the final selected layer (FTOF or ECAL)
+                    if (valid_dt_found) {
+                        std::cout << "Final Selected Layer: " << highestPriorityLayer
+                        << " from " << selectedDetector << std::endl;
+                    }
+
+                   
+
+                    // Now calculate ΔT using the selected path and time only if the beta is positive
+                    float beta_pion = calculateBeta(p, mass_pion);
+                    float beta_kaon = calculateBeta(p, mass_kaon);
+                    float beta_proton = calculateBeta(p, mass_proton);
+                    float beta_deuteron = calculateBeta(p, mass_deuteron);
+
+                   
+                 // If no valid hits found, skip the particle
+                    if (!valid_dt_found) {
+                        cout << "No valid hits found for particle ID: " << i << ", skipping..." << endl;
+                        continue;
+                    }
+
+                   
+                   
+
+                    // Only proceed if beta values are positive
+                    if (beta_pion > 0) {
+                        dt_pion = calculateDeltaT(selectedPath, selectedTime, beta_pion, vt);
+                    }
+
+                    if (beta_kaon > 0) {
+                        dt_kaon = calculateDeltaT(selectedPath, selectedTime, beta_kaon, vt);
+                    }
+
+                    if (beta_proton > 0) {
+                        dt_proton = calculateDeltaT(selectedPath, selectedTime, beta_proton, vt);
+                    }
+
+                    if (beta_deuteron > 0) {
+                        dt_deuteron = calculateDeltaT(selectedPath, selectedTime, beta_deuteron, vt);
+                    }
+
+                    // Store absolute values for PID selection
+                    best_dt_pion = abs(dt_pion);
+                    best_dt_kaon = abs(dt_kaon);
+                    best_dt_proton = abs(dt_proton);
+                    best_dt_deuteron = abs(dt_deuteron);
+
+                    
+                    
+
+ 
+                   
+                    // Continue with further processing if valid ΔT was found
+
+
+                    int manual_selected_pid = 211;
+                    bool passes_cherenkov = true;
+
+                    // Choose PID based on minimal |ΔT|
+                    float min_dt = dt_pion;
+
+                    if (best_dt_kaon < min_dt) {
+                        manual_selected_pid = 321;
+                        min_dt = best_dt_kaon;
+                    }
+                    if (best_dt_proton < min_dt) {
+                        manual_selected_pid = 2212;
+                        min_dt = best_dt_proton;
+                    }
+                    if (best_dt_deuteron < min_dt) {
+                        manual_selected_pid = 45;
+                        min_dt = best_dt_deuteron;
+                    }
+
+                    // Apply Cherenkov checks
+                    if (manual_selected_pid != 211 && p > HTCC_PION_THRESHOLD) {
+                        bool htcc_signal = false;
+                        if (cherMap.find(i) != cherMap.end()) {
+                            for (int iCherRow : cherMap[i]) {
+                                if (CHER.getByte("detector", iCherRow) == HTCC_DETECTOR &&
+                                    CHER.getFloat("nphe", iCherRow) > 2) {
+                                    htcc_signal = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (htcc_signal) {
+                            manual_selected_pid = 211; // Force pion assignment
+                        }
+                    }
+
+                    
+                    if ((manual_selected_pid == 321 || manual_selected_pid == 2212) 
+                        && p > LTCC_PION_THRESHOLD) {
+                        bool ltcc_signal = false;
+                        if (cherMap.find(i) != cherMap.end()) {
+                            for (int iCherRow : cherMap[i]) {
+                                if (CHER.getByte("detector", iCherRow) == LTCC_DETECTOR &&
+                                    CHER.getFloat("nphe", iCherRow) > 2) {
+                                    ltcc_signal = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (ltcc_signal) {
+                            manual_selected_pid = 211; // Revert to pion
+                        }
+                    }
+
+                    cout << "Final selected particle: " << manual_selected_pid << endl; 
+                    if (manual_selected_pid == 45){
+                        PART.show(); 
+                        SCIN.show(); 
+                        CALO.show(); 
+                        EVENT.show(); 
+                        std::cout << "Beta Pion: " << beta_pion << std::endl;
+                        std::cout << "Beta Kaon: " << beta_kaon << std::endl;
+                        std::cout << "Beta Proton: " << beta_proton << std::endl;
+                        std::cout << "Beta Deuteron: " << beta_deuteron << std::endl;
+                        std::cout << "DeltaT Pion: " << dt_pion << std::endl;
+                        std::cout << "DeltaT Kaon: " << dt_kaon << std::endl;
+                        std::cout << "DeltaT Proton: " << dt_proton << std::endl;
+                        std::cout << "DeltaT Deuteron: " << dt_deuteron << std::endl;
+
+    
+
+                    }
+                    
+
+                    // Fill histogram with ACTUAL ΔT (with sign)
+                    if (manual_selected_pid == 211 && passes_cherenkov ) {
+                        h1_deltaT_pion_positive_wopid->Fill(dt_pion); 
+                        h_dt_vs_p_pion_pos_c->Fill(p,dt_pion); 
+                        count_manual++;
+                    }
+                    if (manual_selected_pid == 321 && passes_cherenkov ) {
+                        h1_deltaT_kaon_positive_wopid->Fill(dt_kaon);  
+                        //count_manual++;
+                        h_dt_vs_p_kaon_pos_c->Fill(p,dt_kaon); 
+                    }
+                    if (manual_selected_pid == 2212 && passes_cherenkov ) {
+                        h1_deltaT_proton_wopid->Fill(dt_proton); 
+                        //count_manual++;
+                        h_dt_vs_p_proton_c->Fill(p,dt_proton);
+                    }
+                    if (manual_selected_pid == 45 ) {
+                       h1_deltaT_deuteron_wopid->Fill(dt_deuteron);  //
+                        h_dt_vs_p_deuteron_c->Fill(p,dt_deuteron);
+                        //count_manual++;
+                    }
+
+
+                }
+                //all_sum = count_positive_pion + count_positive_kaon + count_proton + count_deuteron + count_positron + count_pidzero ; 
+                all_sum = count_positive_pion + count_positive_kaon + count_proton + count_deuteron + count_positron  ; 
+                 
+                            
+                
+            }//end event loop 
+            if (event_count >= maxEvents) break;
+        } // end files loop 
+        if (event_count >= maxEvents) break;
+    } // end directories loop
+
+    // Draw the histograms for comparison.
+    TCanvas *c1 = new TCanvas("c1", "DeltaT Comparison", 800, 600);
+    c1->Divide(2,2); 
+    c1->cd(1); 
+
+    h1_deltaT_pion_positive_wopid->SetLineColor(kRed);
+    h1_deltaT_pion_positive_wpid->SetLineColor(kBlue);
+    //h1_deltaT_pion_positive_wopid->SetStats(0); 
+    //h1_deltaT_pion_positive_wpid->SetStats(0); 
+    h1_deltaT_pion_positive_wopid->Draw();
+    h1_deltaT_pion_positive_wpid->Draw("SAME");
+
+    TLegend *leg = new TLegend(0.7, 0.7, 0.9, 0.9);
+    leg->SetTextSize(0.02); 
+    leg->AddEntry(h1_deltaT_pion_positive_wopid, 
+                Form("Custom PID (%.0f)", h1_deltaT_pion_positive_wopid->GetEntries()), 
+                "l");
+    leg->AddEntry(h1_deltaT_pion_positive_wpid, 
+                Form("EB PID (%.0f)", h1_deltaT_pion_positive_wpid->GetEntries()), 
+                "l");
+    
+
+    leg->Draw();
+
+    c1->cd(2); 
+    h1_deltaT_kaon_positive_wopid->SetLineColor(kRed);
+    h1_deltaT_kaon_positive_wpid->SetLineColor(kBlue);
+    //h1_deltaT_pion_positive_wopid->SetStats(0); 
+    //h1_deltaT_pion_positive_wpid->SetStats(0); 
+    h1_deltaT_kaon_positive_wopid->Draw();
+    h1_deltaT_kaon_positive_wpid->Draw("SAME");
+
+   TLegend *leg1 = new TLegend(0.7, 0.7, 0.9, 0.9);
+   leg1->SetTextSize(0.02); 
+    leg1->AddEntry(h1_deltaT_kaon_positive_wopid, 
+                Form("Custom PID (%.0f)", h1_deltaT_kaon_positive_wopid->GetEntries()), 
+                "l");
+    leg1->AddEntry(h1_deltaT_kaon_positive_wpid, 
+                Form("EB PID (%.0f)", h1_deltaT_kaon_positive_wpid->GetEntries()), 
+                "l");
+    
+
+    leg1->Draw();
+
+    c1->cd(3);
+    h1_deltaT_proton_wopid->SetLineColor(kRed);
+    h1_deltaT_proton_wpid->SetLineColor(kBlue);
+    h1_deltaT_proton_wopid->Draw();
+    h1_deltaT_proton_wpid->Draw("SAME");
+
+    TLegend *leg2 = new TLegend(0.7, 0.7, 0.9, 0.9);
+    leg2->SetTextSize(0.02); 
+    leg2->AddEntry(h1_deltaT_proton_wopid, 
+                Form("Custom PID (%.0f)", h1_deltaT_proton_wopid->GetEntries()), 
+                "l");
+    leg2->AddEntry(h1_deltaT_proton_wpid, 
+                Form("EB PID (%.0f)", h1_deltaT_proton_wpid->GetEntries()), 
+                "l");
+    leg2->Draw();
+
+    // Deuteron comparison
+    c1->cd(4);
+    h1_deltaT_deuteron_wopid->SetLineColor(kRed);
+    h1_deltaT_deuteron_wpid->SetLineColor(kBlue);
+    h1_deltaT_deuteron_wopid->Draw();
+    h1_deltaT_deuteron_wpid->Draw("SAME");
+
+    TLegend *leg3 = new TLegend(0.7, 0.7, 0.9, 0.9);
+    leg3->SetTextSize(0.02);  
+    leg3->AddEntry(h1_deltaT_deuteron_wopid, 
+                Form("Custom PID (%.0f)", h1_deltaT_deuteron_wopid->GetEntries()), 
+                "l");
+    leg3->AddEntry(h1_deltaT_deuteron_wpid, 
+                Form("EB PID (%.0f)", h1_deltaT_deuteron_wpid->GetEntries()), 
+                "l");
+    leg3->Draw();
+
+    c1->SaveAs("deltaT_comparison_018536_pos.pdf");
+    //c1->SaveAs("deltaT_comparison_018537.pdf");
+    // Draw and save
+
+    // Draw and save
+    TCanvas* c_all = new TCanvas("c_all", "All +ve #DeltaT vs. p (Before EBPID)", 800, 600);
+    h_dt_vs_p_all_pos->Draw("COLZ");
+    //h_dt_vs_p_all_pos->SetStats(0);
+    gPad->SetLogz();
+    c_all->SaveAs("dt_vs_p_all_positive_before_pid.pdf");
+  
+    TCanvas* c_un = new TCanvas("c_un", "Unidentified #DeltaT vs. p (EBPID =0)", 800, 600);
+    h_dt_vs_p_unidentified->Draw("COLZ");
+    //h_dt_vs_p_all_pos->SetStats(0);
+    gPad->SetLogz();
+    c_un->SaveAs("dt_vs_p_unidentified.pdf");
+
+    TCanvas* c = new TCanvas("c", "ΔT vs. p for Positive Particles", 1200, 1000);
+    c->Divide(2, 2);
+    c->cd(1); h_dt_vs_p_pion_pos->Draw("COLZ"); //h_dt_vs_p_pion_pos->SetStats(0);//gPad->SetLogz();
+    c->cd(2); h_dt_vs_p_kaon_pos->Draw("COLZ"); //h_dt_vs_p_kaon_pos->SetStats(0);//gPad->SetLogz();
+    c->cd(3); h_dt_vs_p_proton->Draw("COLZ");// h_dt_vs_p_proton->SetStats(0);//gPad->SetLogz();
+    c->cd(4); h_dt_vs_p_deuteron->Draw("COLZ");// h_dt_vs_p_deuteron->SetStats(0);//gPad->SetLogz();
+    c->SaveAs("dt_vs_p_positive.pdf");
+
+    TCanvas* c_c = new TCanvas("c", "ΔT vs. p for Positive Particles", 1200, 1000);
+    c_c->Divide(2, 2);
+    c_c->cd(1); h_dt_vs_p_pion_pos_c->Draw("COLZ"); //h_dt_vs_p_pion_pos->SetStats(0);//gPad->SetLogz();
+    c_c->cd(2); h_dt_vs_p_kaon_pos_c->Draw("COLZ"); //h_dt_vs_p_kaon_pos->SetStats(0);//gPad->SetLogz();
+    c_c->cd(3); h_dt_vs_p_proton_c->Draw("COLZ");// h_dt_vs_p_proton->SetStats(0);//gPad->SetLogz();
+    c_c->cd(4); h_dt_vs_p_deuteron_c->Draw("COLZ");// h_dt_vs_p_deuteron->SetStats(0);//gPad->SetLogz();
+    c_c->SaveAs("dt_vs_p_positive_custom.pdf");
+    gStyle->SetStatFont(42);        // 42 is the Helvetica font which is generally clear
+    gStyle->SetStatFontSize(0.03);  
+
+    TCanvas *c2 = new TCanvas("c2", "Criteria and cuts to select trigger electron", 800, 600); 
+    c2->Divide (3,3); 
+    c2->cd(1); 
+    h1_charge_tele->Draw(); 
+    c2->cd(2); 
+    h1_status_tele->Draw(); 
+    c2->cd(3); 
+    h1_vz_tele->Draw(); 
+    c2->cd(4); 
+    h1_chi2pid_tele->Draw(); 
+    c2->cd(5); 
+    h1_nphe_tele->Draw(); 
+    c2->cd(6); 
+    h1_nphe_tele_1->Draw(); 
+    c2->cd(7); 
+    h1_energy_pcal_tele->Draw(); 
+    c2->cd(8); 
+    h1_energy_pcal_tel_1->Draw(); 
+    c2->cd(9);
+    h1_sampling_fraction_tele->Draw(); 
+
+    c2->SaveAs("All_cuts_required_select_trigger_electron_018536.pdf");
+    //c2->SaveAs("All_cuts_required_select_trigger_electron_018537.pdf");
+
+    TCanvas *c3 = new TCanvas("c3", "DeltaT Comparison deuteron", 800, 600);
+    c3->Divide(2, 2);
+
+    // First plot
+    c3->cd(1);
+    //h1_deltaT_deuteron_wpid->GetXaxis()->SetRangeUser(-10, 10); // Set range before drawing
+    h1_deltaT_pion_positive_wpid->Draw(); 
+
+    // Second plot
+    c3->cd(2);
+    //h1_deltaT_deuteron_wopid->GetXaxis()->SetAsixRange(-50, 50); // Set range before drawing
+    h1_deltaT_kaon_positive_wpid->Draw();
+    c3->cd(3);
+    h1_deltaT_proton_wpid->Draw(); 
+    c3->cd(4);
+   
+    h1_deltaT_deuteron_wpid->Draw("SAME"); 
+    
+
+
+    // Update canvas to apply the changes
+    c3->Update(); 
+
+    // Save the canvas
+    c3->SaveAs("deltaT_comparison_018536_deuteron_pos.pdf");
+
+
+
+    gStyle->SetStatFont(42);        // 42 is the Helvetica font which is generally clear
+    gStyle->SetStatFontSize(0.03);    // Adjust font size as needed
+
+
+
+    outputFile->Write();
+    outputFile->Close();
+
+    timer.Stop();
+
+
+    for (int pid : unique_pids) {
+                    std::cout << "Unique PID found: " << pid << std::endl;
+                }
+    cout << "****************************************************************************************" << endl; 
+    cout << "Total number of events: " << event_count << endl; 
+    cout << "Total number of electrons: " <<  total_electrons << endl; 
+    cout << "Total number of positrons: " << total_positrons << endl;
+    cout << "Total number of +ve pions: " << total_positive_pions << endl; 
+    cout << "Total number of -ve pions: " << total_negative_pions << endl; 
+    cout << "Total number of +ve kaons: " << total_positive_kaons << endl;
+    cout << "Total number of -ve kaons: " << total_negative_kaons << endl;
+    cout << "Total number of protons: " << total_protons << endl;
+    cout << "Total number of antiprotons: " << total_antiprotons << endl;
+    cout << "Total number of deuterons: " << total_deuterons << endl;
+    cout << "Total number of neutrons: " << total_neutrons << endl;
+    cout << "Total number of photons: " << total_photons << endl;
+    cout << "Total number of unidentified particles: " << total_unidentified << endl; 
+    cout << "all chi2pid: "<< count_chi2pid << endl; 
+    cout << "****************************************************************************************" << endl; 
+
+    // Print results
+    cout << "****************************************************************************************" << endl;
+    
+    cout << "Total number of electrons: " << total_electrons_trigger << endl;
+    cout << "Total number of positrons: " << total_positrons_trigger << endl;
+    cout << "Total number of +ve pions: " << total_positive_pions_trigger << endl;
+    cout << "Total number of -ve pions: " << total_negative_pions_trigger << endl;
+    cout << "Total number of +ve kaons: " << total_positive_kaons_trigger << endl;
+    cout << "Total number of -ve kaons: " << total_negative_kaons_trigger << endl;
+    cout << "Total number of protons: " << total_protons_trigger << endl;
+    cout << "Total number of antiprotons: " << total_antiprotons_trigger << endl;
+    cout << "Total number of deuterons: " << total_deuterons_trigger << endl;
+    cout << "Total number of neutrons: " << total_neutrons_trigger << endl;
+    cout << "Total number of photons: " << total_photons_trigger << endl;
+    cout << "Total number of unidentified particles: " << total_unidentified_trigger << endl;
+    cout << "All chi2pid entries: " << count_chi2pid_trigger << endl;
+    cout << "****************************************************************************************" << endl;
+
+
+
+
+
+    cout << "****************************************************************************************" << endl; 
+    cout << "Total number +ve charge particles after charge cut: " << count_all_positve << endl; 
+    cout << "Total number of  +ve pions with pid 211: " << count_positive_pion << endl; 
+    cout << "Total number of  +ve kaons with pid 321: " << count_positive_kaon << endl; 
+    cout << "Total number of protons with pid 2212: " << count_proton << endl; 
+    cout << "Total number of  deuterons with pid 45: " << count_deuteron << endl; 
+    cout << "Total number of positrons with pid -11: " << count_positron << endl; 
+    cout << "Total number of particles with pid 0: " << count_pidzero << endl;
+    cout << "all sum +ve particles: " << all_sum << endl; 
+    cout << "****************************************************************************************" << endl; 
+    
+    
+    
+    
+    
+    
+
+   
+    cout << "Entries: PID Event Builder = " << count_pid << ", Custom PID  = " << count_manual << endl;
+     
+    //cout << "Total positron: " << positron_count << endl; 
+    cout << "Total first row elctrons before cut: " << trigger_electron_count_before << endl; 
+    cout << "Total first row elctrons after cut: " << trigger_electron_count_after << endl; 
+    cout << "Total events processed after selecting the trigger electrons after all cuts: " << total_events_processed << endl;
+    cout << "Real time: " << timer.RealTime() << " s, CPU time: " << timer.CpuTime() << " s" << endl;
+    cout << "****************************************************************************************" << endl; 
+
+    
+  
+    return 0;
+}

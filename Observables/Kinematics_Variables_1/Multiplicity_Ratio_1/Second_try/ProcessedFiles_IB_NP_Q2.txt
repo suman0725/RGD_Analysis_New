@@ -1,0 +1,1080 @@
+Target: CxC
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018450.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018461.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018505.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018448.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018834.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018479.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018805.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018490.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018465.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018454.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018828.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018519.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018801.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018494.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018524.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018440.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018796.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018846.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018515.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018498.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018458.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018756.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018480.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018469.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018809.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018475.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018511.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018343.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018339.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018520.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018838.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018444.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018509.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018441.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018470.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018514.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018847.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018346.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018825.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018459.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018481.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018814.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018468.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018843.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018808.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018474.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018510.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018342.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018521.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018839.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018445.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018762.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018508.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018810.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018821.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018451.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018489.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018460.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018449.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018835.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018478.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018804.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018491.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018464.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018455.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018518.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018800.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018495.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018831.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018443.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018344.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018472.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018516.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018827.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018816.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018340.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018841.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018476.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018512.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018523.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018447.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018371.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018812.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018487.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018760.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018369.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018823.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018453.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018506.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018837.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018400.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018493.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018497.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018802.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018799.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018849.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018833.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018452.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018463.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018507.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018401.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018836.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018492.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018807.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018850.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018758.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018496.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018803.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018832.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018442.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018345.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018844.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018473.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018826.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018341.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018477.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018513.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018840.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018522.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018446.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018370.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018813.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018761.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018486.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018822.hipo
+  Skipped (wrong config)
+Target: LD2
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018873.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019036.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018654.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018538.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018321.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019054.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018426.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018542.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018650.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018767.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018648.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018422.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018546.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018325.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018530.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018329.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018318.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018644.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018782.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018852.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019044.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018331.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018528.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018436.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018552.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018773.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019022.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018786.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018856.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018534.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018867.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019058.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018432.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018556.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018777.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018335.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019040.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018328.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018645.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018319.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018783.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018853.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018330.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019045.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018529.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018437.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018553.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018772.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019023.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018787.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018857.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018535.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018433.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018557.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018776.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019041.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018872.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018655.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019037.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018539.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019055.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018427.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018543.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018651.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019033.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019049.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018649.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018766.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018423.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018547.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018324.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018533.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018549.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018851.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018647.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018768.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018332.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019047.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018770.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018435.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018551.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018785.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018429.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019021.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018864.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018537.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018774.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019039.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018431.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018555.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019043.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018336.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019035.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018778.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018559.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018868.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018789.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018425.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018541.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018653.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018439.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018421.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018545.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018764.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019029.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018326.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019053.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018871.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018656.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018779.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019034.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018790.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019056.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018788.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018424.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018858.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018540.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018652.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019030.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018438.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018420.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018765.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019052.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018532.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018780.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018548.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018769.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018646.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019046.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018771.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018434.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018784.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018854.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018428.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018536.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018865.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018419.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019038.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018775.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018430.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018554.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_019042.hipo
+  Skipped (wrong config)
+Target: CuSn
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019066.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018358.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019102.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018604.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018751.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018881.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018947.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018697.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018380.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019097.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018914.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018749.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018666.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018702.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018755.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018631.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018885.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018908.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018574.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018943.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018693.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018384.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019062.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019106.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018600.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018910.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018629.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018375.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019093.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019076.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019112.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018348.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018614.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018966.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018878.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018957.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018379.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018589.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018891.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018741.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018625.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019087.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018935.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018723.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018350.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018676.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018712.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018889.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018591.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018388.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018578.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018904.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018953.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018564.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018918.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018394.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019127.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018895.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018745.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019072.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018929.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018962.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018639.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018595.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018672.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018716.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018365.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018900.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019083.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018727.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018608.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018354.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018615.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018349.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019113.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018391.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018686.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018956.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018879.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018561.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018588.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018890.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018740.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018624.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018934.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019086.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018360.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018888.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018590.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018677.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018713.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018579.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018905.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018565.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018919.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018952.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018894.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018744.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018620.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019126.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019073.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019117.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018928.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018673.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018717.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018638.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018594.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018930.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019082.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018355.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018609.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018642.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018605.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019067.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019103.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018359.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018750.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018598.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018880.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018368.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018571.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018946.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018696.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018732.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018924.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019096.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018915.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018569.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018667.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018703.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018754.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018630.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018884.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018385.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018942.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018692.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018909.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018575.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018938.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018601.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019063.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019107.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018911.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018875.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018584.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018628.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018663.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018736.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018920.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019092.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018965.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019111.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019120.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018892.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018742.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018626.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018709.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018954.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018563.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018720.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018353.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019109.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019084.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018936.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018907.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018592.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018675.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018711.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018362.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018669.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018896.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018746.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018622.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018567.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018680.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018950.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018961.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019098.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019071.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019115.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018613.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018903.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018948.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018698.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018671.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018715.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018596.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018366.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018724.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018640.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019080.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019065.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019101.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018607.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018728.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018573.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018944.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018694.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018383.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019130.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018719.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018752.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018636.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018882.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019094.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018926.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018730.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019119.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018665.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018701.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018372.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018940.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018690.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018577.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018387.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018632.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018886.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018679.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019105.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018603.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019088.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018586.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018661.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018705.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018376.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018913.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018877.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019090.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018922.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018347.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019079.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018729.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018606.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019100.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018382.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018945.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018572.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018753.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018883.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018718.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019131.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018927.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019095.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019118.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018731.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019129.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018373.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018583.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018700.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018916.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018386.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018576.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018941.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018678.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019089.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018377.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018660.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018704.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018587.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018912.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018876.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018959.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018923.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019091.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019078.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019074.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019110.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018708.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018893.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018743.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018627.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019121.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018392.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019108.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018352.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018721.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018937.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019085.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018906.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018593.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018747.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018623.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018668.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019125.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018681.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018951.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018566.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018960.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018612.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019070.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019114.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018949.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018699.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018670.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018714.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018356.hipo
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019068.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018725.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018641.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_018933.hipo
+  Skipped (wrong config)
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019081.hipo
+  Skipped (wrong config)

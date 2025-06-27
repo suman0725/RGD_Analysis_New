@@ -1,0 +1,25 @@
+Target: CxC
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CxC/skim_run_018450.hipo
+Reached 10000 events
+
+Electron counts: Total=10031, Trigger=7997, Kinematic=2454
+Pion counts: Total=1204, Kinematic=286
+
+Target: LD2
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/LD2/skim_run_018873.hipo
+Reached 10000 events
+
+Electron counts: Total=10029, Trigger=9475, Kinematic=3295
+Pion counts: Total=1477, Kinematic=442
+
+Target: CuSn
+  - /lustre24/expphy/cache/hallb/scratch/rg-d/production/skim_pass0v11/CuSn/skim_run_019066.hipo
+Reached 20000 events
+
+Electron counts: Total=20059, Trigger=20000, Kinematic=0
+Pion counts: Total=2241, Kinematic=0
+Cu Electron counts: Total=5699, Trigger=5690, Kinematic=1986
+Cu Pion counts: Total=698, Kinematic=149
+Sn Electron counts: Total=7691, Trigger=7669, Kinematic=2737
+Sn Pion counts: Total=1304, Kinematic=210
+

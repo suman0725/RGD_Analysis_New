@@ -1,0 +1,1 @@
+p_min(GeV)	mean(ns)	sigma(ns)	mean-3sigma(ns)	mean+3sigma(ns)

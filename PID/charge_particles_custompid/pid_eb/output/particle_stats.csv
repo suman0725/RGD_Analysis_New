@@ -1,0 +1,151 @@
+Statistic,Value
+Total events processed,100000
+Pre-trigger total particles,794854
+Pre-trigger total neutral particles (charge == 0),398814
+Pre-trigger total positive charged particles (charge > 0),182742
+Pre-trigger total negative charged particles (charge < 0),213298
+Post-trigger total positive charged particles,175841
+Post-trigger total negative charged particles,204963
+Post-trigger positive particles with invalid beta (beta <= 0 or beta > 1.2),107132
+Post-trigger positive particles with valid beta and p (plotted in beta vs. p),68709
+Post-trigger positive particles with 1 <= beta <= 1.2 (excluded from mass histogram),6657
+Entries in mass histogram (hMassPositiveAll),62052
+Pion peak mean (Gaussian) (GeV/c^2),0.146574
+Pion peak sigma (Gaussian) (GeV/c^2),0.039556
+Pion mass selection range low (Gaussian) (GeV/c^2),0.0674623
+Pion mass selection range high (Gaussian) (GeV/c^2),0.225686
+Post-trigger number of particles in pion mass range (Gaussian),15069
+Post-trigger number of particles with pid == 211 in Gaussian-only mass range,14930
+Estimated contamination fraction in pion sample (Gaussian-only) (%),2.90428
+Pion peak mean (with background) (GeV/c^2),0.153009
+Pion peak sigma (with background) (GeV/c^2),0.0574796
+Pion mass selection range low (with background) (GeV/c^2),0.0380495
+Pion mass selection range high (with background) (GeV/c^2),0.267968
+Post-trigger number of particles in updated pion mass range (with background),17316
+Post-trigger number of particles with pid == 211 in updated mass range,17118
+Estimated contamination fraction in pion sample (with background) (%),3.67094
+Post-trigger number of particles with pid == 211 outside the updated mass range,2387
+Post-trigger number of particles in updated pion mass range (Forward),11917
+Post-trigger number of particles with pid == 211 in updated mass range (Forward),11719
+Estimated contamination fraction in pion sample (Forward) (%),3.67094
+Post-trigger number of particles in updated pion mass range (Central),5399
+Post-trigger number of particles with pid == 211 in updated mass range (Central),5399
+Estimated contamination fraction in pion sample (Central) (%),3.67094
+Post-trigger number of particles with pid == 211 and chi2pid > 0,12159
+Post-trigger number of particles with pid == 211 and chi2pid < 0,22559
+Post-trigger number of particles with pid == 211 and chi2pid == 0,0
+Chi2PID mean for positive pions (Forward, Post-Trigger),0.010897
+Chi2PID sigma for positive pions (Forward, Post-Trigger),0.997308
+Chi2PID cut range low (Forward),-2.9891
+Chi2PID cut range high (Forward),3.0109
+Chi2PID mean for positive pions (Central, Post-Trigger),-0.148075
+Chi2PID sigma for positive pions (Central, Post-Trigger),1.41223
+Chi2PID cut range low (Central),-3.14807
+Chi2PID cut range high (Central),2.85193
+Post-trigger number of particles with pid == 211 in updated mass range after chi2pid cut (overall),16255
+Estimated contamination fraction after chi2pid cut (overall) (%),0.0912531
+Post-trigger number of particles with pid == 211 in updated mass range after chi2pid cut (Forward),11117
+Estimated contamination fraction after chi2pid cut (Forward) (%),0.0913183
+Post-trigger number of particles with pid == 211 in updated mass range after chi2pid cut (Central),5138
+Estimated contamination fraction after chi2pid cut (Central) (%),0.0911097
+Pre-trigger total electrons (pid == 11),100579
+Trigger electron events,95944
+Execution time (seconds),4.72329
+
+Pre-Trigger PID Counts (REC::Particle),
+PID,Count
+-2212,8472
+-321,3113
+-211,43648
+-11,483
+0,160123
+11,100579
+22,149679
+45,8478
+211,36312
+321,5520
+2112,248649
+2212,29798
+
+Pre-Trigger PID Count Validation,
+Sum of PID counts,794854
+Matches pre-trigger total particles?,Yes
+
+Trigger Electron Cut Statistics,
+Cut,Count
+Electrons with pid == 11,100579
+Electrons with pid == 11 and status < 0,100000
+Electrons with pid == 11, status < 0, and vz_tele in [-20, 5],95944
+Electrons with pid == 11, status < 0, vz_tele in [-20, 5], and abs(status) / 1000 == 2,95944
+
+Post-Trigger Positive Pion Statistics (Events with Trigger Electron),
+Statistic,Count
+Pre-trigger total positive pions (pid == 211) across all events,36312
+Post-trigger positive pions (pid == 211) in events with trigger electron (all regions),35086
+Post-trigger positive pions in Forward region (abs(status) / 2000 == 1),17242
+Post-trigger positive pions in Central region (abs(status) / 4000 == 1),17844
+Sum of Forward and Central regions,35086
+Sum matches post-trigger total positive pions in events with trigger electron?,Yes
+
+Pre-Trigger PID Counts with Valid Chi2PID (REC::Particle),
+PID,Count
+-2212,7276
+-321,3087
+-211,43417
+-11,483
+0,0
+11,100579
+22,0
+45,7250
+211,35929
+321,5462
+2112,0
+2212,29688
+
+Pre-Trigger PID Counts with Invalid Chi2PID (REC::Particle),
+PID,Count
+-2212,1196
+-321,26
+-211,231
+-11,0
+0,160123
+11,0
+22,149679
+45,1228
+211,383
+321,58
+2112,248649
+2212,110
+
+Pre-Trigger Chi2PID Count Validation,
+Sum of particles with valid Chi2PID,233171
+Sum of particles with invalid Chi2PID,561683
+Total (valid + invalid),794854
+Matches sum of pre-trigger PID counts?,Yes
+
+Pre-Trigger Positive Charged Particles by PID and Chi2PID Validity,
+PID,Total Positive,Valid Chi2PID,Invalid Chi2PID
+0,102151,0,102151
+2212,29798,29688,110
+321,5520,5462,58
+211,36312,35929,383
+-11,483,483,0
+45,8478,7250,1228
+
+Post-Trigger Positive Charged Particles by PID and Chi2PID Validity (Forward Region),
+PID,Total Positive,Valid Chi2PID,Invalid Chi2PID
+0,18293,0,18293
+2212,13808,13702,106
+321,1498,1442,56
+211,17242,16874,368
+-11,467,467,0
+45,2927,1736,1191
+
+Post-Trigger Positive Charged Particles by PID and Chi2PID Validity (Central Region),
+PID,Total Positive,Valid Chi2PID,Invalid Chi2PID
+0,79757,0,79757
+2212,14973,14973,0
+321,3838,3838,0
+211,17844,17844,0
+-11,0,0,0
+45,5194,5194,0
