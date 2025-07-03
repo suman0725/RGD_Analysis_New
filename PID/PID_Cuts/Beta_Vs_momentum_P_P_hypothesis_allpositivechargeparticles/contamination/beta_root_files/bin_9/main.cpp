@@ -373,7 +373,7 @@ int main() {
     auto start = chrono::high_resolution_clock::now();
     gStyle->SetOptStat(0);
 
-    TFile* file = new TFile("/w/hallb-scshelf2102/clas12/suman/RGD_Analysis/PID/charge_particles_custompid/Misidentification/Skim/pkptreeCxC_9_test_modified.root", "READ");
+    TFile* file = new TFile("/w/hallb-scshelf2102/clas12/suman/new_RGD_Analysis/PID/charge_particles_custompid/Misidentification/Skim/pkptreeCxC_9_test_modified.root", "READ");
     if (!file || file->IsZombie()) {
         cerr << "Error: Cannot open file" << endl;
         return 1;
@@ -392,7 +392,12 @@ int main() {
     auto histo_beta_before = df_pions_before.Histo1D(modelBeta, "beta");
     auto histo_beta_after = df_after_cut.Histo1D(modelBeta, "beta");
 
-    double p_mid = (pLow + pHigh) / 2;
+
+     // Calculate the true average momentum in the bin
+     auto p_mean_action = df_pions_before.Mean("p");
+     double p_mid = *p_mean_action;
+     
+   // double p_mid = (pLow + pHigh) / 2;
     double beta_pi_theory = p_mid / sqrt(p_mid * p_mid + 0.1396 * 0.1396);
     double beta_K_theory = p_mid / sqrt(p_mid * p_mid + 0.4937 * 0.4937);
     double beta_p_theory = p_mid / sqrt(p_mid * p_mid + 0.9383 * 0.9383);
@@ -423,7 +428,7 @@ int main() {
     totalCB->SetNpx(1000);
     totalCB->SetRange(0.95, 1.02);
     Double_t initParams[21] = {
-        amp_pi, beta_pi_theory, 0.003, 2.0, 3.0, 2.0, 3.0, // Pion (mirrored double-sided)
+        amp_pi, beta_pi_theory, 0.003, 2.0, 3.0, 1.59, 2.68, // Pion (mirrored double-sided)
         amp_K, beta_K_theory, 0.0025, 1.0, 2.0,             // Kaon (single-sided)
         amp_p, beta_p_theory, 0.003, 1.0, 2.0, 1.5, 2.0,   // Proton (independent double-sided)
         10.0, 5.0                                          // Linear background (a, b)
@@ -435,8 +440,10 @@ int main() {
     // Pion
     totalCB->SetParLimits(0, 0, 16000); totalCB->FixParameter(1, beta_pi_theory); totalCB->SetParLimits(2, 0.002, 0.004);
     totalCB->SetParLimits(3, 0.1, 10.0); totalCB->SetParLimits(4, 1.0, 20.0); // Left tail
-    totalCB->FixParameter(5, totalCB->GetParameter(3)); // Fix alphaRight to alphaLeft
-    totalCB->FixParameter(6, totalCB->GetParameter(4)); // Fix nRight to nLeft
+   // totalCB->FixParameter(5, totalCB->GetParameter(3)); // Fix alphaRight to alphaLeft
+    //totalCB->FixParameter(6, totalCB->GetParameter(4)); // Fix nRight to nLeft
+    totalCB->FixParameter(5, 1.59);
+    totalCB->FixParameter(6, 2.68); 
 
     // Kaon
     totalCB->SetParLimits(7, 0, 6000); totalCB->FixParameter(8, beta_K_theory); totalCB->SetParLimits(9, 0.0025, 0.004);

@@ -1,0 +1,52 @@
+Fit Parameters for Crystal Ball Fit (Bin: p = 2.2 - 2.5 GeV/c)
+------------------------------------
+p0: 62926.1 +/- 84.4698
+p1: 0.998226 +/- 0
+p2: 0.00291879 +/- 3.95271e-06
+p3: 1.57489 +/- 0.00220176
+p4: 2.58026 +/- 0.00724461
+p5: 2 +/- 0
+p6: 3 +/- 0
+p7: 7167.92 +/- 26.2654
+p8: 0.978466 +/- 0
+p9: 0.00353936 +/- 1.21652e-05
+p10: 1.75871 +/- 0.01021
+p11: 1 +/- 0.00104664
+p12: 349.426 +/- 4.7157
+p13: -100 +/- 2.15364
+------------------------------------
+NDF: 190
+Chi2: 5026.24
+Chi2/NDF: 26.4539
+EDM: 6.37035e-07
+Fit Status: 4000
+IsValid: Yes
+------------------------------------
+Pion Efficiency and Kaon Contamination Results (dt Cut)
+--------------------------------
+Momentum range: [2.2, 2.5] GeV/c
+Average momentum: 2.34033 GeV/c
+β range after dt cut: [0.9882, 1.0086]
+--------------------------------
+True pions before cuts: 1.35206e+06 ± 1162.78
+Pions after dt cut: 1.24201e+06 ± 1114.46
+Kaons after dt cut: 12996.4 ± 114.002
+Total events after dt cut: 1.23223e+06 ± 1110.06
+--------------------------------
+Efficiency (dt cut): 91.8604 ± 0.114172 %
+Kaon Contamination (dt cut): 1.05471 ± 0.00930031 %
+--------------------------------
+Pion Efficiency and Kaon Contamination Results (chi2pid Cut)
+--------------------------------
+Momentum range: [2.2, 2.5] GeV/c
+Average momentum: 2.34033 GeV/c
+β range after chi2pid cut: [0.9754, 1.019]
+--------------------------------
+True pions before cuts: 1.35206e+06 ± 1162.78
+Pions after chi2pid cut: 1.3145e+06 ± 1146.52
+Kaons after chi2pid cut: 27271 ± 165.139
+Total events after chi2pid cut: 1.29953e+06 ± 1139.97
+--------------------------------
+Efficiency (chi2pid cut): 97.222 ± 0.119086 %
+Kaon Contamination (chi2pid cut): 2.09853 ± 0.0128403 %
+--------------------------------

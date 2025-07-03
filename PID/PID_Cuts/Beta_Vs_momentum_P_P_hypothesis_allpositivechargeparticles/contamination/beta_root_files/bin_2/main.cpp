@@ -167,7 +167,7 @@ int main() {
     line_p->SetLineColor(kRed);
     line_p->SetLineStyle(2);
     line_p->SetLineWidth(3);
-    line_p->Draw();
+    //line_p->Draw();
 
     TLegend* leg = new TLegend(0.65, 0.6, 0.95, 0.95);
     leg->SetTextSize(0.02);

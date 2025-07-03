@@ -1,0 +1,63 @@
+Fit Parameters for Crystal Ball Fit (Bin: p = 3.7 - 4.0 GeV/c)
+------------------------------------
+p0: 14551.1 +/- 43.0104
+p1: 0.99934 +/- 0
+p2: 0.00272881 +/- 9.15519e-06
+p3: 1.59976 +/- 0.00772851
+p4: 2.68774 +/- 0.0264447
+p5: 2 +/- 0
+p6: 3 +/- 0
+p7: 2562.86 +/- 23.7196
+p8: 0.991844 +/- 0
+p9: 0.0025 +/- 1.35487e-06
+p10: 1.05807 +/- 0.0492133
+p11: 13.294 +/- 13.9695
+p12: 6526.58 +/- 27.369
+p13: 0.971336 +/- 1.19698e-05
+p14: 0.00308947 +/- 1.46491e-05
+p15: 1.61826 +/- 0.0288143
+p16: 2.46625 +/- 0.22926
+p17: 1.60019 +/- 0.0288254
+p18: 2.60392 +/- 0.0992171
+p19: 210.494 +/- 11.7249
+p20: -100 +/- 30.0559
+------------------------------------
+NDF: 158
+Chi2: 1400.83
+Chi2/NDF: 8.86599
+EDM: 2.94957e-06
+Fit Status: 4210
+IsValid: Yes
+------------------------------------
+Pion Efficiency and Contamination Results (dt Cut)
+--------------------------------
+Momentum range: [3.7, 4] GeV/c
+Average momentum: 3.84182 GeV/c
+β range after dt cut: [0.989, 1.0094]
+--------------------------------
+True pions before cuts: 302275 ± 549.795
+Pions after dt cut: 272940 ± 522.436
+Kaons after dt cut: 36151.1 ± 190.135
+Protons after dt cut: 6965.13 ± 83.4573
+Total events after dt cut: 302210 ± 549.736
+--------------------------------
+Efficiency (dt cut): 90.2953 ± 0.238422 %
+Kaon Contamination (dt cut): 11.9623 ± 0.0665714 %
+Proton Contamination (dt cut): 2.30473 ± 0.0279321 %
+--------------------------------
+Pion Efficiency and Contamination Results (chi2pid Cut)
+--------------------------------
+Momentum range: [3.7, 4] GeV/c
+Average momentum: 3.84182 GeV/c
+β range after chi2pid cut: [0.9898, 1.0174]
+--------------------------------
+True pions before cuts: 302275 ± 549.795
+Pions after chi2pid cut: 278742 ± 527.96
+Kaons after chi2pid cut: 14119.8 ± 118.827
+Protons after chi2pid cut: 7559.32 ± 86.9444
+Total events after chi2pid cut: 268202 ± 517.882
+--------------------------------
+Efficiency (chi2pid cut): 92.2149 ± 0.242155 %
+Kaon Contamination (chi2pid cut): 5.26463 ± 0.0454563 %
+Proton Contamination (chi2pid cut): 2.81852 ± 0.0328712 %
+--------------------------------

@@ -102,7 +102,7 @@ int main() {
     auto start = chrono::high_resolution_clock::now();
     gStyle->SetOptStat(0);
 
-    TFile* file = new TFile("/w/hallb-scshelf2102/clas12/suman/RGD_Analysis/PID/charge_particles_custompid/Misidentification/Skim/pkptreeCxC_9_test_modified.root", "READ");
+    TFile* file = new TFile("/w/hallb-scshelf2102/clas12/suman/new_RGD_Analysis/PID/charge_particles_custompid/Misidentification/Skim/pkptreeCxC_9_test_modified.root", "READ");
     if (!file || file->IsZombie()) {
         cerr << "Error: Cannot open file" << endl;
         return 1;
@@ -110,14 +110,14 @@ int main() {
 
     ROOT::RDataFrame df_all("EB_all_pion_assumed", file);
 
-    double pLow = 4.0, pHigh = 4.3;
+    double pLow = 4, pHigh = 4.3;
     auto df_pions_before = df_all.Filter([pLow, pHigh](float p) { return p >= pLow && p < pHigh; }, {"p"});
 
     auto df_after_cut = df_pions_before.Filter([](float p, float dt) {
         return dt > getdtCutNeg(p) && dt < getdtCutPos(p);
     }, {"p", "dt"});
 
-    ROOT::RDF::TH1DModel modelBeta("beta_fit_cb", "p: [4.0-4.3) GeV/c; #beta; Counts", 200, 0.95, 1.03);
+    ROOT::RDF::TH1DModel modelBeta("beta_fit_cb", "p: [4-4.3) GeV/c; #beta; Counts", 200, 0.95, 1.03);
     auto histo_beta_before = df_pions_before.Histo1D(modelBeta, "beta");
     auto histo_beta_after = df_after_cut.Histo1D(modelBeta, "beta");
 
@@ -152,7 +152,7 @@ int main() {
     totalCB->SetNpx(1000);
     totalCB->SetRange(0.95, 1.03);
     Double_t initParams[21] = {
-        amp_pi, beta_pi_theory, 0.003, 2.0, 3.0, 2.0, 3.0, // Pion (mirrored double-sided)
+        amp_pi, beta_pi_theory, 0.004, 2.0, 3.0, 2.0, 3.0, // Pion (mirrored double-sided)
         amp_K, beta_K_theory, 0.0015, 1.0, 2.0,             // Kaon (single-sided)
         amp_p, beta_p_theory, 0.003, 1.0, 2.0, 1.5, 2.0,   // Proton (independent double-sided)
         10.0, 5.0                                          // Linear background (a, b)
@@ -162,13 +162,13 @@ int main() {
     for (int i = 0; i < 21; ++i)
         totalCB->SetParName(i, Form("p%d", i));
     // Pion
-    totalCB->SetParLimits(0, 0, 12000); totalCB->SetParameter(1, beta_pi_theory); totalCB->SetParLimits(2, 0.002, 0.0045);
+    totalCB->SetParLimits(0, 0, 12000); totalCB->FixParameter(1, beta_pi_theory); totalCB->SetParLimits(2, 0.002, 0.005);
     totalCB->SetParLimits(3, 0.1, 10.0); totalCB->SetParLimits(4, 1.0, 20.0); // Left tail
     totalCB->FixParameter(5, totalCB->GetParameter(3)); // Fix alphaRight to alphaLeft
     totalCB->FixParameter(6, totalCB->GetParameter(4)); // Fix nRight to nLeft
 
     // Kaon
-    totalCB->SetParLimits(7, 0, 4000); totalCB->SetParameter(8, beta_K_theory); totalCB->SetParLimits(9, 0.0025, 0.003);
+    totalCB->SetParLimits(7, 0, 3500); totalCB->SetParameter(8, beta_K_theory); totalCB->SetParLimits(9, 0.0025, 0.003);
     totalCB->SetParLimits(10, 0.1, 20.0); totalCB->SetParLimits(11, 1.0, 100.0);
 
     // Proton
@@ -182,7 +182,7 @@ int main() {
 
     TFitResultPtr fitResult = histo_beta_before->Fit(totalCB, "RME+S");
     totalCB->SetLineColor(kBlack);
-    totalCB->SetLineWidth(4);
+    totalCB->SetLineWidth(2);
     totalCB->Draw("SAME");
 
     TLine* line_pi = new TLine(beta_pi_theory, 0, beta_pi_theory, histo_beta_before->GetMaximum());
@@ -316,7 +316,7 @@ int main() {
     double protonContamination = (pionIntegral > 0) ? (protonIntegral / pionIntegral) * 100.0 : 0.0;
 
     // Append contamination to the output file
-    ofstream outFile("fit_parameters_bin9.txt");
+    ofstream outFile("fit_parameters_bin10.txt");
     if (outFile.is_open()) {
         outFile << "Fit Parameters for Crystal Ball Fit (Bin 5: p = 3.7 - 4.0 GeV/c)\n";
         outFile << "------------------------------------\n";
@@ -334,7 +334,7 @@ int main() {
         outFile << "Proton Contamination (Proton Integral [0.9801, 1.03] / Pion Integral [0.95, 1.03]): " << fixed << setprecision(3) << protonContamination << "%\n";
         outFile.close();
     } else {
-        cerr << "Error: Cannot open fit_parameters_bin9.txt for writing" << endl;
+        cerr << "Error: Cannot open fit_parameters_bin10.txt for writing" << endl;
     }
 
   /*   leg->AddEntry(cb_pion, "Pion fit - background ", "l");
@@ -347,7 +347,7 @@ int main() {
     leg->AddEntry(cb_proton, "Proton fit + background", "l");
     leg->AddEntry(bg, "Background", "l");
 
-    canvas->Print("bin_9.png");
+    canvas->Print("bin_10.png");
 
     delete leg;
     delete line_pi;
